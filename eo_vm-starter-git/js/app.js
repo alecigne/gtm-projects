@@ -1,21 +1,4 @@
 /**
- * Fichier principal de l'application.
- */
-var VendingMachine = /** @class */ (function () {
-    function VendingMachine() {
-    }
-    VendingMachine.prototype.acceptCoin = function (coin) {
-        this.total += coin.value;
-        document.getElementById('total').textContent = this.total.toString();
-    };
-    return VendingMachine;
-}());
-/// <reference path="vending-machine.ts"/>
-var machine = new VendingMachine();
-/**
- * Liste des catégories de produits.
- */
-/**
  * Liste des types de pièces de monnaie acceptées par le distributeur.
  */
 var Quarter = /** @class */ (function () {
@@ -82,6 +65,25 @@ var Dollar = /** @class */ (function () {
     };
     return Dollar;
 }());
+/// <reference path="coins.ts"/>
+/**
+ * Fichier principal de l'application.
+ */
+var VendingMachine = /** @class */ (function () {
+    function VendingMachine() {
+        this.total = 0;
+    }
+    VendingMachine.prototype.acceptCoin = function (coin) {
+        this.total += coin.value;
+        document.getElementById('total').textContent = this.total.toString();
+    };
+    return VendingMachine;
+}());
+/// <reference path="vending-machine.ts"/>
+var machine = new VendingMachine();
+/**
+ * Liste des catégories de produits.
+ */
 /***
  * Fonction factory qui renvoie des instances de produits aléatoirement.
  */
