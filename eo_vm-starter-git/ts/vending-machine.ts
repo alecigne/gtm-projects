@@ -5,10 +5,16 @@
  */
 
  class VendingMachine {
-     total = 0;
+     total = ko.observable(0);
+
+     acceptedCoins = [
+        new Quarter(),
+        new Dime(),
+        new Half(),
+        new Dollar()
+     ]
 
      acceptCoin(coin: any): void {
-        this.total += coin.value;
-        document.getElementById('total').textContent = this.total.toString();
+        this.total(this.total() + coin.value);
      }
  }

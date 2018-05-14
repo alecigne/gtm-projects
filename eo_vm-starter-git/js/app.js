@@ -71,16 +71,22 @@ var Dollar = /** @class */ (function () {
  */
 var VendingMachine = /** @class */ (function () {
     function VendingMachine() {
-        this.total = 0;
+        this.total = ko.observable(0);
+        this.acceptedCoins = [
+            new Quarter(),
+            new Dime(),
+            new Half(),
+            new Dollar()
+        ];
     }
     VendingMachine.prototype.acceptCoin = function (coin) {
-        this.total += coin.value;
-        document.getElementById('total').textContent = this.total.toString();
+        this.total(this.total() + coin.value);
     };
     return VendingMachine;
 }());
 /// <reference path="vending-machine.ts"/>
 var machine = new VendingMachine();
+ko.applyBindings(machine);
 /**
  * Liste des catégories de produits.
  */
