@@ -4,6 +4,10 @@
 var VendingMachine = /** @class */ (function () {
     function VendingMachine() {
     }
+    VendingMachine.prototype.acceptCoin = function (coin) {
+        this.total += coin.value;
+        document.getElementById('total').textContent = this.total.toString();
+    };
     return VendingMachine;
 }());
 /// <reference path="vending-machine.ts"/>
