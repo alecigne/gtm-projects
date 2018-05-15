@@ -1,1 +1,11 @@
-- npm install bootstrap@3 --save pour installer bootstrap
+#+STARTUP: indent
+
+* Bootstrap
+
+Installation :
+
+#+BEGIN_SRC sh
+  npm install bootstrap@3 --save
+#+END_SRC
+
+Puis ajout de la ligne dans =.angular-cli.json=.

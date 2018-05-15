@@ -4,6 +4,20 @@
  */
 import { Question } from './question';
 
+// Instanciation de Quiz avec un objet en paramètre
+/* const q = new Quiz({
+  id: 13,
+  title: "foo",
+  description: "bar"
+}) */
+
+interface QuizOptions {
+  id?: number;
+  title?: string;
+  description?: string;
+  canRetryQuestion?: boolean;
+  questions?: any[];  // Pass raw data. Will be re-hydrated.
+}
 
 export class Quiz {
   id: number;
@@ -12,13 +26,9 @@ export class Quiz {
   canRetryQuestion: boolean;
   questions: Question[];
 
-  constructor(options: {
-    id?: number;
-    title?: string;
-    description?: string;
-    canRetryQuestion?: boolean;
-    questions?: any[];  // Pass raw data. Will be re-hydrated.
-  } = {}) {
+  // Un objet permet de mettre des paramètres optionnels facilement
+  // != paramètres positionnels
+  constructor(options: QuizOptions = {}) {
     this.id = options.id || null;
     this.title = options.title || '';
     this.description = options.description || '';
