@@ -1,122 +1,144 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 /**
  * Liste des types de pièces de monnaie acceptées par le distributeur.
  */
-var Quarter = /** @class */ (function () {
+var Coin = /** @class */ (function () {
+    function Coin() {
+    }
+    Object.defineProperty(Coin.prototype, "value", {
+        get: function () {
+            return this._value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Coin.prototype, "url", {
+        get: function () {
+            return this._url;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Coin;
+}());
+var Quarter = /** @class */ (function (_super) {
+    __extends(Quarter, _super);
     function Quarter() {
-        this._value = 0.25;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._value = 0.25;
+        _this._url = "./img/Quarter.png";
+        return _this;
     }
-    Object.defineProperty(Quarter.prototype, "value", {
-        get: function () {
-            return this._value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Quarter.prototype.getImageUrl = function () {
-        return "./img/Quarter.png";
-    };
     return Quarter;
-}());
-var Dime = /** @class */ (function () {
+}(Coin));
+var Dime = /** @class */ (function (_super) {
+    __extends(Dime, _super);
     function Dime() {
-        this._value = 0.10;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._value = 0.10;
+        _this._url = "./img/Dime.png";
+        return _this;
     }
-    Object.defineProperty(Dime.prototype, "value", {
-        get: function () {
-            return this._value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Dime.prototype.getImageUrl = function () {
-        return "./img/Dime.png";
-    };
     return Dime;
-}());
-var Half = /** @class */ (function () {
+}(Coin));
+var Half = /** @class */ (function (_super) {
+    __extends(Half, _super);
     function Half() {
-        this._value = 0.50;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._value = 0.50;
+        _this._url = "./img/Half.png";
+        return _this;
     }
-    Object.defineProperty(Half.prototype, "value", {
-        get: function () {
-            return this._value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Half.prototype.getImageUrl = function () {
-        return "./img/Half.png";
-    };
     return Half;
-}());
-var Dollar = /** @class */ (function () {
+}(Coin));
+var Dollar = /** @class */ (function (_super) {
+    __extends(Dollar, _super);
     function Dollar() {
-        this._value = 1.00;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._value = 1;
+        _this._url = "./img/Dollar.jpg";
+        return _this;
     }
-    Object.defineProperty(Dollar.prototype, "value", {
-        get: function () {
-            return this._value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Dollar.prototype.getImageUrl = function () {
-        return "./img/Dollar.jpg";
-    };
     return Dollar;
-}());
+}(Coin));
 /**
  * Liste des catégories de produits.
  */
-var SodaCategory = /** @class */ (function () {
+var ProductCategory = /** @class */ (function () {
+    function ProductCategory() {
+    }
+    return ProductCategory;
+}());
+var SodaCategory = /** @class */ (function (_super) {
+    __extends(SodaCategory, _super);
     function SodaCategory() {
-        this.name = 'Soda';
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.name = 'Soda';
+        return _this;
     }
     SodaCategory.prototype.getImageUrl = function () {
         return 'img/SodaCan.png';
     };
     return SodaCategory;
-}());
-var NutsCategory = /** @class */ (function () {
+}(ProductCategory));
+var NutsCategory = /** @class */ (function (_super) {
+    __extends(NutsCategory, _super);
     function NutsCategory() {
-        this.name = 'Nuts';
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.name = 'Nuts';
+        return _this;
     }
     NutsCategory.prototype.getImageUrl = function () {
         return 'img/Nuts.png';
     };
     return NutsCategory;
-}());
-var ChipsCategory = /** @class */ (function () {
+}(ProductCategory));
+var ChipsCategory = /** @class */ (function (_super) {
+    __extends(ChipsCategory, _super);
     function ChipsCategory() {
-        this.name = 'Potato chips';
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.name = 'Potato chips';
+        return _this;
     }
     ChipsCategory.prototype.getImageUrl = function () {
         return 'img/Chips.png';
     };
     return ChipsCategory;
-}());
-var CandyCategory = /** @class */ (function () {
+}(ProductCategory));
+var CandyCategory = /** @class */ (function (_super) {
+    __extends(CandyCategory, _super);
     function CandyCategory() {
-        this.name = 'Candy';
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.name = 'Candy';
+        return _this;
     }
     CandyCategory.prototype.getImageUrl = function () {
         return 'img/Candy.png';
     };
     return CandyCategory;
-}());
-var CandyBarCategory = /** @class */ (function () {
+}(ProductCategory));
+var CandyBarCategory = /** @class */ (function (_super) {
+    __extends(CandyBarCategory, _super);
     function CandyBarCategory() {
-        this.name = 'Candy bar';
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.name = 'Candy bar';
+        return _this;
     }
     CandyBarCategory.prototype.getImageUrl = function () {
         return 'img/CandyBar.png';
     };
     return CandyBarCategory;
-}());
+}(ProductCategory));
 /// <reference path="categories.ts"/>
-/**
- * Liste des produits vendus dans le distributeur.
- */
 var Initial = /** @class */ (function () {
     function Initial() {
         this.name = 'Please select a product';

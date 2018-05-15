@@ -8,7 +8,7 @@
 class Cell {
     stock = ko.observable(0);
     sold = ko.observable(false);
-    constructor(public product: any, stock: number) {
+    constructor(public product: Product, stock: number) {
         this.stock(stock);
     }
 }
@@ -22,7 +22,7 @@ enum VendingMachineSize {
 class VendingMachine {
     total = ko.observable(0);
 
-    acceptedCoins = [
+    acceptedCoins: Coin[] = [
         new Quarter(),
         new Dime(),
         new Half(),
@@ -40,7 +40,7 @@ class VendingMachine {
         }
     }
 
-    acceptCoin(coin: any): void {
+    acceptCoin(coin: Coin): void {
         this.total(this.total() + coin.value);
     }
 

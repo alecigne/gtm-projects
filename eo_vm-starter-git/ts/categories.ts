@@ -2,37 +2,42 @@
  * Liste des catégories de produits.
  */
 
-class SodaCategory {
+abstract class ProductCategory {
+  abstract name: string;
+  abstract getImageUrl(): string;
+}
+
+class SodaCategory extends ProductCategory {
   name = 'Soda';
   getImageUrl() {
     return 'img/SodaCan.png';
   }
 }
 
-class NutsCategory {
+class NutsCategory extends ProductCategory {
   name = 'Nuts';
-  getImageUrl () {
+  getImageUrl() {
     return 'img/Nuts.png';
   }
 }
 
-class ChipsCategory {
+class ChipsCategory extends ProductCategory {
   name = 'Potato chips';
-  getImageUrl () {
+  getImageUrl() {
     return 'img/Chips.png';
   }
 }
 
-class CandyCategory {
+class CandyCategory extends ProductCategory {
   name = 'Candy';
-  getImageUrl () {
+  getImageUrl() {
     return 'img/Candy.png';
   }
 }
 
-class CandyBarCategory {
+class CandyBarCategory extends ProductCategory {
   name = 'Candy bar';
-  getImageUrl () {
+  getImageUrl() {
     return 'img/CandyBar.png';
   }
 }

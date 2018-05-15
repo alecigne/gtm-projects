@@ -31,7 +31,7 @@
         Payé : <span data-bind="text: total"></span> €
         <br><br>
         <div data-bind="foreach: acceptedCoins">
-          <img data-bind="attr: {src: getImageUrl()}, click: $parent.acceptCoin.bind($parent)">
+          <img data-bind="attr: {src: url}, click: $parent.acceptCoin.bind($parent)">
         </div>
         <button class="btn btn-primary" data-bind="click: pay, enable: canPay">Payer</button>
       </h4>

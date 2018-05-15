@@ -2,50 +2,35 @@
  * Liste des types de pièces de monnaie acceptées par le distributeur.
  */
 
- class Quarter {
-     private _value = 0.25;
+abstract class Coin {
+    protected abstract _value: number;
+    protected abstract _url: string;
 
-     get value(): number {
-         return this._value;
-     }
+    get value(): number {
+        return this._value;
+    }
 
-     getImageUrl(): string {
-         return "./img/Quarter.png";
-     }
- }
+    get url(): string {
+        return this._url;
+    }
+}
 
- class Dime {
-     private _value = 0.10;
+class Quarter extends Coin {
+    protected _value = 0.25;
+    protected _url = "./img/Quarter.png";
+}
 
-     get value(): number {
-         return this._value;
-     }
+class Dime extends Coin {
+    protected _value = 0.10;
+    protected _url = "./img/Dime.png";
+}
 
-     getImageUrl(): string {
-         return "./img/Dime.png";
-     }
- }
+class Half extends Coin {
+    protected _value = 0.50;
+    protected _url = "./img/Half.png";
+}
 
- class Half {
-     private _value = 0.50;
-
-     get value(): number {
-         return this._value;
-     }
-
-     getImageUrl(): string {
-         return "./img/Half.png";
-     }
- }
-
- class Dollar {
-     private _value = 1.00;
-
-     get value(): number {
-         return this._value;
-     }
-
-     getImageUrl(): string {
-         return "./img/Dollar.jpg";
-     }
- }
+class Dollar extends Coin {
+    protected _value = 1;
+    protected _url = "./img/Dollar.jpg";
+}
