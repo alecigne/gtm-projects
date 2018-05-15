@@ -205,20 +205,44 @@ var MilkyWay = /** @class */ (function () {
     }
     return MilkyWay;
 }());
+function getProduct() {
+    var random = Math.floor(Math.random() * 11);
+    switch (random) {
+        case 0: return new CocaCola();
+        case 1: return new Fanta();
+        case 2: return new Sprite();
+        case 3: return new Peanuts();
+        case 4: return new Cashews();
+        case 5: return new Plain();
+        case 6: return new Cheddar();
+        case 7: return new Mints();
+        case 8: return new Gummies();
+        case 9: return new Hersey();
+        case 10: return new MilkyWay();
+    }
+}
 /// <reference path="coins.ts"/>
 /// <reference path="products.ts"/>
 /**
  * Fichier principal de l'application.
  */
 var Cell = /** @class */ (function () {
-    function Cell() {
+    function Cell(product, stock) {
+        this.product = product;
         this.stock = ko.observable(0);
         this.sold = ko.observable(false);
+        this.stock(stock);
     }
     return Cell;
 }());
+var VendingMachineSize;
+(function (VendingMachineSize) {
+    VendingMachineSize[VendingMachineSize["Small"] = 6] = "Small";
+    VendingMachineSize[VendingMachineSize["Medium"] = 9] = "Medium";
+    VendingMachineSize[VendingMachineSize["Large"] = 12] = "Large";
+})(VendingMachineSize || (VendingMachineSize = {}));
 var VendingMachine = /** @class */ (function () {
-    function VendingMachine() {
+    function VendingMachine(size) {
         this.total = ko.observable(0);
         this.acceptedCoins = [
             new Quarter(),
@@ -226,6 +250,11 @@ var VendingMachine = /** @class */ (function () {
             new Half(),
             new Dollar()
         ];
+        this.cells = [];
+        for (var i = 0; i < size; i++) {
+            var cell = new Cell(getProduct(), 3);
+            this.cells.push(cell);
+        }
     }
     VendingMachine.prototype.acceptCoin = function (coin) {
         this.total(this.total() + coin.value);
@@ -233,7 +262,7 @@ var VendingMachine = /** @class */ (function () {
     return VendingMachine;
 }());
 /// <reference path="vending-machine.ts"/>
-var machine = new VendingMachine();
+var machine = new VendingMachine(VendingMachineSize.Medium);
 ko.applyBindings(machine);
 /***
  * Fonction factory qui renvoie des instances de produits aléatoirement.

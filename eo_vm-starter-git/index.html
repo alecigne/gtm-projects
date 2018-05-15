@@ -12,8 +12,17 @@
 
   <div class="row">
 
-    <div class="col-md-8">
-      AFFICHER LES PRODUITS ICI COUCOU SALUT
+    <div class="col-md-8 machine" data-bind="foreach: cells">
+      <div class="col-md-4 cell">
+        <div class="col-md-6 image">
+          <img data-bind="attr: { src: product.category.getImageUrl(), alt: product.category.name }">
+        </div>
+        <div class="col-md-6 productInfo">
+          <div data-bind="text: product.name"></div>
+          <h4 data-bind="text: stock"></h4>
+          <h3 data-bind="text: product.price + '€'"></h3>
+        </div>
+      </div>
     </div>
 
     <div class="col-md-4">
