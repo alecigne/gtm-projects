@@ -65,10 +65,158 @@ var Dollar = /** @class */ (function () {
     };
     return Dollar;
 }());
+/**
+ * Liste des catégories de produits.
+ */
+var SodaCategory = /** @class */ (function () {
+    function SodaCategory() {
+        this.name = 'Soda';
+    }
+    SodaCategory.prototype.getImageUrl = function () {
+        return 'img/SodaCan.png';
+    };
+    return SodaCategory;
+}());
+var NutsCategory = /** @class */ (function () {
+    function NutsCategory() {
+        this.name = 'Nuts';
+    }
+    NutsCategory.prototype.getImageUrl = function () {
+        return 'img/Nuts.png';
+    };
+    return NutsCategory;
+}());
+var ChipsCategory = /** @class */ (function () {
+    function ChipsCategory() {
+        this.name = 'Potato chips';
+    }
+    ChipsCategory.prototype.getImageUrl = function () {
+        return 'img/Chips.png';
+    };
+    return ChipsCategory;
+}());
+var CandyCategory = /** @class */ (function () {
+    function CandyCategory() {
+        this.name = 'Candy';
+    }
+    CandyCategory.prototype.getImageUrl = function () {
+        return 'img/Candy.png';
+    };
+    return CandyCategory;
+}());
+var CandyBarCategory = /** @class */ (function () {
+    function CandyBarCategory() {
+        this.name = 'Candy bar';
+    }
+    CandyBarCategory.prototype.getImageUrl = function () {
+        return 'img/CandyBar.png';
+    };
+    return CandyBarCategory;
+}());
+/// <reference path="categories.ts"/>
+/**
+ * Liste des produits vendus dans le distributeur.
+ */
+var CocaCola = /** @class */ (function () {
+    function CocaCola() {
+        this.name = 'Coca-Cola';
+        this.price = 2.3;
+        this.category = new SodaCategory();
+    }
+    return CocaCola;
+}());
+var Fanta = /** @class */ (function () {
+    function Fanta() {
+        this.name = 'Fanta';
+        this.price = 2;
+        this.category = new SodaCategory();
+    }
+    return Fanta;
+}());
+var Sprite = /** @class */ (function () {
+    function Sprite() {
+        this.name = 'Sprite';
+        this.price = 1.80;
+        this.category = new SodaCategory();
+    }
+    return Sprite;
+}());
+var Peanuts = /** @class */ (function () {
+    function Peanuts() {
+        this.name = 'Peanuts';
+        this.price = 1.50;
+        this.category = new NutsCategory();
+    }
+    return Peanuts;
+}());
+var Cashews = /** @class */ (function () {
+    function Cashews() {
+        this.name = 'Cashews';
+        this.price = 2.80;
+        this.category = new NutsCategory();
+    }
+    return Cashews;
+}());
+var Plain = /** @class */ (function () {
+    function Plain() {
+        this.name = 'Plain';
+        this.price = 2;
+        this.category = new ChipsCategory();
+    }
+    return Plain;
+}());
+var Cheddar = /** @class */ (function () {
+    function Cheddar() {
+        this.name = 'Cheddar';
+        this.price = 2;
+        this.category = new ChipsCategory();
+    }
+    return Cheddar;
+}());
+var Mints = /** @class */ (function () {
+    function Mints() {
+        this.name = 'Mints';
+        this.price = 1.30;
+        this.category = new CandyCategory();
+    }
+    return Mints;
+}());
+var Gummies = /** @class */ (function () {
+    function Gummies() {
+        this.name = 'Gummies';
+        this.price = 1.90;
+        this.category = new CandyCategory();
+    }
+    return Gummies;
+}());
+var Hersey = /** @class */ (function () {
+    function Hersey() {
+        this.name = 'Hersey\'s';
+        this.price = 1.30;
+        this.category = new CandyBarCategory();
+    }
+    return Hersey;
+}());
+var MilkyWay = /** @class */ (function () {
+    function MilkyWay() {
+        this.name = 'Milky Way';
+        this.price = 1.80;
+        this.category = new CandyBarCategory();
+    }
+    return MilkyWay;
+}());
 /// <reference path="coins.ts"/>
+/// <reference path="products.ts"/>
 /**
  * Fichier principal de l'application.
  */
+var Cell = /** @class */ (function () {
+    function Cell() {
+        this.stock = ko.observable(0);
+        this.sold = ko.observable(false);
+    }
+    return Cell;
+}());
 var VendingMachine = /** @class */ (function () {
     function VendingMachine() {
         this.total = ko.observable(0);
@@ -87,13 +235,7 @@ var VendingMachine = /** @class */ (function () {
 /// <reference path="vending-machine.ts"/>
 var machine = new VendingMachine();
 ko.applyBindings(machine);
-/**
- * Liste des catégories de produits.
- */
 /***
  * Fonction factory qui renvoie des instances de produits aléatoirement.
- */
-/**
- * Liste des produits vendus dans le distributeur.
  */
 //# sourceMappingURL=app.js.map
