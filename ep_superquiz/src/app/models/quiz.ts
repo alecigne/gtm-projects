@@ -11,14 +11,6 @@ import { Question } from './question';
   description: "bar"
 }) */
 
-interface QuizOptions {
-  id?: number;
-  title?: string;
-  description?: string;
-  canRetryQuestion?: boolean;
-  questions?: any[];  // Pass raw data. Will be re-hydrated.
-}
-
 export class Quiz {
   id: number;
   title: string;
@@ -28,7 +20,13 @@ export class Quiz {
 
   // Un objet permet de mettre des paramètres optionnels facilement
   // != paramètres positionnels
-  constructor(options: QuizOptions = {}) {
+  constructor(options: {
+    id?: number;
+    title?: string;
+    description?: string;
+    canRetryQuestion?: boolean;
+    questions?: any[];  // Pass raw data. Will be re-hydrated.
+  } = {}) {
     this.id = options.id || null;
     this.title = options.title || '';
     this.description = options.description || '';

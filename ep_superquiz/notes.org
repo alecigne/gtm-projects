@@ -12,4 +12,6 @@ Puis ajout de la ligne dans =.angular-cli.json=.
 
 * Analyse des classes par défaut
 
-- Création d'une interface pour la classe =Quiz=
+- Création d'une interface pour la classe =Quiz= (pour l'exemple)
+- Retour à l'implémentation par défaut
+- Implémentation de la classe =user=
