@@ -4,6 +4,11 @@
  * Liste des produits vendus dans le distributeur.
  */
 
+class Initial {
+  name = 'Please select a product';
+  price = 0;
+}
+
 class CocaCola {
   name = 'Coca-Cola';
   price = 2.3;

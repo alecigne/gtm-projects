@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
   <title>Distributeur de bonbons</title>
 </head>
 <body>
@@ -14,8 +15,8 @@
 
     <div class="col-md-8 machine" data-bind="foreach: cells">
       <div class="col-md-4 cell">
-        <div class="col-md-6 image">
-          <img data-bind="attr: { src: product.category.getImageUrl(), alt: product.category.name }">
+        <div class="col-md-6 image" data-bind="css: { selected: $data == $parent.selectedCell(), sold: sold }">
+          <img data-bind="click: $parent.selectCell.bind($parent), attr: { src: product.category.getImageUrl(), alt: product.category.name }">
         </div>
         <div class="col-md-6 productInfo">
           <div data-bind="text: product.name"></div>
@@ -32,7 +33,7 @@
         <div data-bind="foreach: acceptedCoins">
           <img data-bind="attr: {src: getImageUrl()}, click: $parent.acceptCoin.bind($parent)">
         </div>
-        <!-- <button data-bind="click: acceptCoin" class="btn btn-primary">Insérer pièce</button> -->
+        <button class="btn btn-primary" data-bind="click: pay, enable: canPay">Payer</button>
       </h4>
     </div>
 
