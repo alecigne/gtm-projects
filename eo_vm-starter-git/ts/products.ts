@@ -1,16 +1,16 @@
-/// <reference path="categories.ts"/>
+import { ProductCategory, SodaCategory, NutsCategory, ChipsCategory, CandyCategory, CandyBarCategory } from "./categories";
 
 /**
  * Liste des produits vendus dans le distributeur.
  */
 
-interface Product {
+export interface Product {
   name: string;
   price: number;
   category?: ProductCategory
 }
 
-class Initial implements Product {
+export class Initial implements Product {
   name = 'Please select a product';
   price = 0;
 }
@@ -81,7 +81,7 @@ class MilkyWay implements Product {
   category = new CandyBarCategory();
 }
 
-function getProduct() {
+export function getProduct() {
   const random = Math.floor(Math.random() * 11);
   switch (random) {
     case 0: return new CocaCola();

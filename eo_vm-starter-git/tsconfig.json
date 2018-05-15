@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "outFile": "./js/app.js",
-    "sourceMap": true
+    "outDir": "./js",
+    "sourceMap": true,
+    "module": "amd" // On passe dans le pattern module
   },
   "exclude": [
     "demos"

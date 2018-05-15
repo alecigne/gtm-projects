@@ -42,8 +42,12 @@
 </div><!-- .container -->
 
 <!-- Charger les fichiers JavaScript ici -->
+<!-- Charger les fichiers JavaScript ici -->
 <script src="./lib/knockout.js"></script>
-<script src="./js/app.js"></script>
+<script src="./lib/require.js"></script>
+<script>
+  require(["./js/bootstrapper"]);
+</script>
 
 </body>
 </html>

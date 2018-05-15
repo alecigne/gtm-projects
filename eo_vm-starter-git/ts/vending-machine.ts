@@ -1,5 +1,5 @@
-/// <reference path="coins.ts"/>
-/// <reference path="products.ts"/>
+import { Product, Initial, getProduct } from "./products";
+import { Coin, Quarter, Dime, Half, Dollar } from "./coins";
 
 /**
  * Fichier principal de l'application.
@@ -13,13 +13,13 @@ class Cell {
     }
 }
 
-enum VendingMachineSize {
+export enum VendingMachineSize {
     Small = 6,
     Medium = 9,
     Large = 12
 }
 
-class VendingMachine {
+export class VendingMachine {
     total = ko.observable(0);
 
     acceptedCoins: Coin[] = [
