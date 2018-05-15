@@ -15,3 +15,17 @@ Puis ajout de la ligne dans =.angular-cli.json=.
 - Création d'une interface pour la classe =Quiz= (pour l'exemple)
 - Retour à l'implémentation par défaut
 - Implémentation de la classe =user=
+
+* Composants
+
+- *Réutilisation* des composants
+- *Encapsulation* de la complexité
+- Génération des éléments d'un composant :
+
+  #+BEGIN_SRC sh
+    ng generate component toto
+    # ng g c = raccourci
+  #+END_SRC
+
+- On peut changer le nom des balises à l'aide de l'option =prefix=
+  dans le fichier =.angular-cli.json=
