@@ -29,3 +29,16 @@ Puis ajout de la ligne dans =.angular-cli.json=.
 
 - On peut changer le nom des balises à l'aide de l'option =prefix=
   dans le fichier =.angular-cli.json=
+
+* Interpolations et bindings
+* Directives structurelles
+
+- On crée le composant =QuizList= (à la racine) :
+
+  #+BEGIN_SRC sh
+    ng g c QuizList
+  #+END_SRC
+
+- Attention, le HTML n'a pas accès à =QUIZZES=, il faut rappeler la
+  valeur de =QUIZZES= (scope du fichier) dans une variable de la
+  classe =QuizListComponent=, ici =quizList=.
