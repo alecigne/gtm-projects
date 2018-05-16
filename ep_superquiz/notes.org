@@ -49,3 +49,4 @@ Les *actions* modifient les *données*, les *données* modifient le
 *HTML*.
 
 * Input/output
+* Quiz player
