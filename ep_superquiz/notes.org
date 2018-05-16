@@ -47,3 +47,5 @@ Puis ajout de la ligne dans =.angular-cli.json=.
 
 Les *actions* modifient les *données*, les *données* modifient le
 *HTML*.
+
+* Input/output
