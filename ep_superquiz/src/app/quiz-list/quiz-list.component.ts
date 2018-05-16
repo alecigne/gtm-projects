@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QUIZZES } from "../data/quizzes";
 import { Quiz } from '../models/quiz';
+import { QuizService } from '../quiz.service';
 
 @Component({
   selector: 'app-quiz-list',
@@ -10,11 +11,13 @@ import { Quiz } from '../models/quiz';
   ]
 })
 export class QuizListComponent implements OnInit {
-  quizList = QUIZZES;
+  // Eviter d'avoir undefined (temps de chargement du backend)
+  quizList: Quiz[] = [];
 
-  constructor() { }
+  constructor(private quizService:QuizService) {}
 
   ngOnInit() {
+    this.quizList = this.quizService.loadQuizzes();
   }
 
   addQuiz() {

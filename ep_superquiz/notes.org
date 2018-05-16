@@ -50,3 +50,4 @@ Les *actions* modifient les *données*, les *données* modifient le
 
 * Input/output
 * Quiz player
+* Service
