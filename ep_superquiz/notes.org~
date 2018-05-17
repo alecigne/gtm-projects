@@ -42,3 +42,12 @@ Puis ajout de la ligne dans =.angular-cli.json=.
 - Attention, le HTML n'a pas accès à =QUIZZES=, il faut rappeler la
   valeur de =QUIZZES= (scope du fichier) dans une variable de la
   classe =QuizListComponent=, ici =quizList=.
+
+* Ecran de question d'un quiz
+
+Les *actions* modifient les *données*, les *données* modifient le
+*HTML*.
+
+* Input/output
+* Quiz player
+* Service
