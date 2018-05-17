@@ -69,3 +69,6 @@ Le pipe =async= permet d'extraire la donnée d'un observable
 Bon résumé p160.
 
 * Module Quiz
+* Routeur
+
+=[routerLink]= vs. =[href]= : on recharge TOUT si on utilise =href= !

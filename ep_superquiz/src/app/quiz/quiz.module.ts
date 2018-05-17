@@ -6,10 +6,17 @@ import { QuizItemComponent } from './quiz-item/quiz-item.component';
 import { QuizPlayerComponent } from './quiz-player/quiz-player.component';
 import { QuizNavComponent } from './quiz-nav/quiz-nav.component';
 import { QuizService } from './quiz.service';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'quizzes', component: QuizListComponent },
+  { path: 'quiz/:quizId', component: QuizPlayerComponent },
+]
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [
     QuizListComponent,

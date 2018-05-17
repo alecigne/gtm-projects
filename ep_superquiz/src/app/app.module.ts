@@ -6,6 +6,14 @@ import { NavbarComponent } from './common/navbar/navbar.component';
 import { HomeComponent } from './common/home/home.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { QuizModule } from './quiz/quiz.module';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './common/login/login.component';
+
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
@@ -13,10 +21,12 @@ import { QuizModule } from './quiz/quiz.module';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    QuizModule
+    QuizModule,
+    RouterModule.forRoot(routes)
   ],
   bootstrap: [AppComponent]
 })

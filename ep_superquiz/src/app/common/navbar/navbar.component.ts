@@ -15,8 +15,8 @@ export class NavbarComponent implements OnInit {
   logoPath = "/assets/logo_superquiz.png";
   user = new User({name: "Bob l'Eponge", email: "bob@eponge.com"});
   links: Array<Link> = [
-    { text: "Accueil", path: "#" },
-    { text: "Quizzes", path: "#" },
+    { text: "Accueil", path: "home" },
+    { text: "Quizzes", path: "quizzes" },
     { text: "Admin", path: "#" },
     { text: "Login", path: "#" }
   ];

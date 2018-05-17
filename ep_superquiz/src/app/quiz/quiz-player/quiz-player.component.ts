@@ -6,6 +6,7 @@ import { QuizService } from '../quiz.service';
 import { Quiz } from '../../models/quiz';
 import { Question } from '../../models/question';
 import { Observable } from 'rxjs/Observable';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-quiz-player',
@@ -24,7 +25,9 @@ export class QuizPlayerComponent implements OnInit {
 
   constructor(
     private quizService: QuizService,
-    private quizStateManager: QuizStateManager) {}
+    private quizStateManager: QuizStateManager,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     // Ces objets sont désormais fournis par le service
@@ -33,11 +36,15 @@ export class QuizPlayerComponent implements OnInit {
     this.currentAnswer = this.quizStateManager.getCurrentAnswer();
     this.currentAnswers = this.quizStateManager.getCurrentAnswers();
     // Charge le quiz sur lequel l'utilisateur à cliquer
-    // L'ID du quiz à charger viendra de l'URL
-    const quizId = 32;
-    const quiz = this.quizService.loadQuiz(quizId);
-    // Pousse le quiz chargé dans l'observable 'currentQuiz'
-    this.quizStateManager.setQuiz(quiz);
+    // L'ID du quiz vient maintenant de l'URL
+    this.route.paramMap.subscribe(params => {
+      const quizId = parseInt(params.get('quizId'), 10);
+      const quiz = this.quizService.loadQuiz(quizId);
+      // Pousse le quiz chargé dans l'observable 'currentQuiz'
+      this.quizStateManager.setQuiz(quiz);
+      // cf. template HTML, on voit bien qu'un changement d'URL provoque le changement de quiz
+      console.log(quizId);
+    });
   }
 
   onAnswered(answer: Answer) {
