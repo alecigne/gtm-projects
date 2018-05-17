@@ -5,12 +5,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { HomeComponent } from './common/home/home.component';
 import { FooterComponent } from './common/footer/footer.component';
-import { QuizListComponent } from './quiz-list/quiz-list.component';
-import { QuizQuestionComponent } from './quiz-question/quiz-question.component';
-import { QuizItemComponent } from './quiz-item/quiz-item.component';
-import { QuizPlayerComponent } from './quiz-player/quiz-player.component';
-import { QuizNavComponent } from './quiz-nav/quiz-nav.component';
-import { QuizService } from './quiz.service';
+import { QuizModule } from './quiz/quiz.module';
 
 @NgModule({
   declarations: [
@@ -18,14 +13,11 @@ import { QuizService } from './quiz.service';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    QuizListComponent,
-    QuizQuestionComponent,
-    QuizItemComponent,
-    QuizPlayerComponent,
-    QuizNavComponent
   ],
-  imports: [BrowserModule],
-  bootstrap: [AppComponent],
-  providers: [QuizService]
+  imports: [
+    BrowserModule,
+    QuizModule
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

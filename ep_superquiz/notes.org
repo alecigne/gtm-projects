@@ -67,3 +67,5 @@ Le pipe =async= permet d'extraire la donnée d'un observable
 (cf. p162). =async= « s'abonne » à l'observable.
 
 Bon résumé p160.
+
+* Module Quiz
