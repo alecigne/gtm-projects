@@ -77,3 +77,4 @@ Bon résumé p160.
 
 - On ajoute un alias (=api-start=)
 - Injection de dépendance pour l'URL de base
+- CRUD complet (code de Vincent)
