@@ -39,9 +39,8 @@ export class QuizPlayerComponent implements OnInit {
     // L'ID du quiz vient maintenant de l'URL
     this.route.paramMap.subscribe(params => {
       const quizId = parseInt(params.get('quizId'), 10);
-      const quiz = this.quizService.loadQuiz(quizId);
-      // Pousse le quiz chargé dans l'observable 'currentQuiz'
-      this.quizStateManager.setQuiz(quiz);
+      const obs = this.quizService.loadQuiz(quizId);
+      obs.subscribe(quiz => this.quizStateManager.setQuiz(quiz));
       // cf. template HTML, on voit bien qu'un changement d'URL provoque le changement de quiz
       console.log(quizId);
     });

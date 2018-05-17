@@ -72,3 +72,8 @@ Bon résumé p160.
 * Routeur
 
 =[routerLink]= vs. =[href]= : on recharge TOUT si on utilise =href= !
+
+* Utilisation d'une API REST
+
+- On ajoute un alias (=api-start=)
+- Injection de dépendance pour l'URL de base

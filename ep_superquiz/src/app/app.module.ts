@@ -8,6 +8,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { QuizModule } from './quiz/quiz.module';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './common/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,8 +27,14 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     QuizModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: 'JSON_SERVER_URL', useValue: 'http://localhost:3004' }
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

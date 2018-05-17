@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Quiz } from '../models/quiz';
 import { QUIZZES } from '../data/quizzes';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class QuizService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  loadQuizzes(): Quiz[] {
-    return QUIZZES;
+  loadQuizzes(): Observable<Quiz[]> {
+    return this.http.get<Quiz[]>('http://localhost:3004/quizzes');
   };
 
-  loadQuiz(quizId: number): Quiz {
-    return QUIZZES.find(quiz => quiz.id === quizId);
+  loadQuiz(quizId: number): Observable<Quiz> {
+    return this.http.get<Quiz>(`http://localhost:3004/quizzes/${quizId}`);
   };
 
 }
