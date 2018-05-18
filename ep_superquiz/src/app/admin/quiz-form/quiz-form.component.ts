@@ -25,7 +25,7 @@ export class QuizFormComponent implements OnInit {
     this.quizForm = this.fb.group({
       // Les validateurs doivent être exploités
       quizTitle: ['', [Validators.required, Validators.maxLength(20)]],
-      quizDescription: [],
+      quizDescription: ['', [Validators.required, Validators.maxLength(50)]],
       quizMultipleChoiceAllowed: []
     })
 

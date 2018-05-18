@@ -12,6 +12,7 @@ import { ObservablesComponent } from './observables/observables.component';
 
 import { FakeQuizService } from './fake-quiz.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FieldComponent } from './field/field.component';
 
 const routes: Routes = [
   {
@@ -41,7 +42,8 @@ const routes: Routes = [
     QuizFormComponent,
     QuestionsListComponent,
     QuestionFormComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    FieldComponent
   ],
   providers: [
     FakeQuizService

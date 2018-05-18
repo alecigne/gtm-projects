@@ -1,0 +1,14 @@
+<div class="form-group" [class.has-error]="control.dirty && control.invalid">
+  <label class="control-label">{{ label }}</label>
+  <!-- Sera remplacé par le contenu de <app-field></app-field> -->
+  <ng-content></ng-content>
+  <div class="help-block" *ngIf="control.dirty && control.invalid">
+    <p *ngIf="control.hasError('required')">
+      Ce champ est obligatoire.
+    </p>
+    <p *ngIf="control.hasError('maxlength')">
+      Titre trop long, veuillez retirer {{ control.getError('maxlength').actualLength - control.getError('maxlength').requiredLength
+      }} caractère(s).
+    </p>
+  </div>
+</div>

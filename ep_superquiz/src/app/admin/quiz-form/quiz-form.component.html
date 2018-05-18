@@ -1,29 +1,16 @@
 <form [formGroup]="quizForm" (ngSubmit)="buildQuiz()" novalidate>
 
-  <div class="form-group" [class.has-error]="quizForm.get('quizTitle').dirty && quizForm.get('quizTitle').invalid">
-    <label class="control-label">Titre*</label>
-    <input formControlName="quizTitle" type="text" class="form-control" placeholder="Titre">
-    <div class="help-block" *ngIf="quizForm.get('quizTitle').dirty && quizForm.get('quizTitle').invalid">
-      <p *ngIf="quizForm.get('quizTitle').hasError('required')">
-        Ce champ est obligatoire.
-      </p>
-      <p *ngIf="quizForm.get('quizTitle').hasError('maxlength')">
-        Titre trop long, veuillez retirer
-        {{ quizForm.get('quizTitle').getError('maxlength').actualLength - quizForm.get('quizTitle').getError('maxlength').requiredLength }}
-        caractère(s).
-      </p>
-    </div>
-  </div>
+  <app-field label="Titre*" [control]="quizForm.get('quizTitle')">
+      <input formControlName="quizTitle" type="text" class="form-control" placeholder="Titre">
+  </app-field>
 
-  <div class="form-group">
-    <label class="control-label">Description</label>
-    <textarea formControlName="quizDescription" class="form-control" placeholder="Description" rows="3"></textarea>
-  </div>
+  <app-field label="Description" [control]="quizForm.get('quizDescription')">
+      <textarea formControlName="quizDescription" class="form-control" placeholder="Description" rows="3"></textarea>
+  </app-field>
 
-  <div class="form-group">
-    <label class="control-label">Peut ré-essayer les questions</label>
-    <input formControlName="quizMultipleChoiceAllowed" type="checkbox">
-  </div>
+  <app-field label="Peut ré-essayer les questions" [control]="quizForm.get('quizMultipleChoiceAllowed')">
+      <input formControlName="quizMultipleChoiceAllowed" type="checkbox">
+  </app-field>
 
   <button type="submit" class="btn btn-primary" [disabled]="quizForm.invalid">Enregistrer</button>
   <a routerLink="..">Annuler</a>

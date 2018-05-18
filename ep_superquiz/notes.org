@@ -81,6 +81,8 @@ Bon résumé p160.
 
 * Formulaires
 
+** Formulaire simple
+
 - Ajout du module =AdminModule= : utilisation du lazy
   loading. Inconvénient par rapport à un import : un peu de temps de
   chargement. On doit recharger le =ng serve=.
@@ -91,6 +93,9 @@ Bon résumé p160.
   ID. cf. =admin/quiz-form=.
 - Ne pas oublier d'importer =ReactiveFormsModule= dans =AdminModule=.
 - Ne surtout pas oublier le =.subscribe= après =saveQuiz= !
+
+** Formulaire factorisé (composant)
+
 - Pour un composant commun :
   + Faire un module commun
   + Ajouter le composant à partager
