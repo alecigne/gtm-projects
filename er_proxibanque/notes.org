@@ -1,0 +1,5 @@
+* Mise en place
+
+  - =ng new proxibanque=
+  - =npm install bootstrap@3 --save=
+  - Ajout du CSS dans =.angular-cli.json=
