@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
     { text: "Accueil", path: "home" },
     { text: "Quizzes", path: "quizzes" },
     { text: "Admin", path: "admin" },
-    { text: "Login", path: "#" }
+    { text: "Login", path: "login" }
   ];
 
   constructor() { }

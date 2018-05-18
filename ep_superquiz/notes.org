@@ -101,3 +101,15 @@ Bon résumé p160.
   + Ajouter le composant à partager
   + L'exporter
   + L'importer où c'est nécessaire
+
+* Authentification
+
+- On inscrit le service (=Auth=) dans les providers. Le login
+  fonctionne.
+- On ajoute un garde :
+
+  #+BEGIN_SRC sh
+      ng g g services/auth
+  #+END_SRC
+
+- L'ajouter aux providers :)
