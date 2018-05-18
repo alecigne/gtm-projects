@@ -3,3 +3,13 @@
   - =ng new proxibanque=
   - =npm install bootstrap@3 --save=
   - Ajout du CSS dans =.angular-cli.json=
+
+* Clients
+
+ - Ajout d'un module client et d'une interface client
+ - Ajout des composants clients (penser à configurer
+   =.angular-cli.json=), imports et déclaration
+ - Ajout d'un service client
+   =ng g s client/client=
+ - Inscription du service client au provider du module client
+ - Ajout des signatures de méthodes dans le service client
