@@ -16,5 +16,9 @@ export class ClientListComponent implements OnInit {
     this.cs.loadClients().subscribe(data => this.clientsList = data);
   }
 
+  deleteClient(id: number) {
+    this.cs.deleteClient(id).subscribe();
+    alert('Client n°' + id + ' effacé.');
+  }
 
 }

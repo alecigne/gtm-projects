@@ -15,22 +15,6 @@
   ],
   "clients": [
     {
-      "id": 1,
-      "prenom": "Jean-Michel",
-      "nom": "Hiltbrunner",
-      "login": "jmhiltbrunner",
-      "password": "1234",
-      "conseiller": "bob"
-    },
-    {
-      "id": 2,
-      "prenom": "Anthony",
-      "nom": "Le Cigne",
-      "login": "alecigne",
-      "password": "1234",
-      "conseiller": "bob"
-    },
-    {
       "id": 3,
       "prenom": "Morane",
       "nom": "Musa",

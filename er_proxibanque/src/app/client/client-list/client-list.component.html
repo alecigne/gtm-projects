@@ -19,6 +19,11 @@
         <td>{{ client.prenom }}</td>
         <td>{{ client.login }}</td>
         <td>{{ client.password }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteClient(client.id)">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer
+    </button>
+        </td>
       </tr>
       </tbody>
     </table>
