@@ -78,3 +78,21 @@ Bon résumé p160.
 - On ajoute un alias (=api-start=)
 - Injection de dépendance pour l'URL de base
 - CRUD complet (code de Vincent)
+
+* Formulaires
+
+- Ajout du module =AdminModule= : utilisation du lazy
+  loading. Inconvénient par rapport à un import : un peu de temps de
+  chargement. On doit recharger le =ng serve=.
+- Deux URL mènent au même formulaire, comportement différent selon
+  =POST= ou =PUT=. cf. méthode =saveQuiz=, quiz avec ou sans ID passé
+  en argument, et comportement différent.
+- Dans le formulaire, on checke l'URL pour la présence d'un
+  ID. cf. =admin/quiz-form=.
+- Ne pas oublier d'importer =ReactiveFormsModule= dans =AdminModule=.
+- Ne surtout pas oublier le =.subscribe= après =saveQuiz= !
+- Pour un composant commun :
+  + Faire un module commun
+  + Ajouter le composant à partager
+  + L'exporter
+  + L'importer où c'est nécessaire
