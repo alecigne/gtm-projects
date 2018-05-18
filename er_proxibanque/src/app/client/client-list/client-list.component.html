@@ -1,3 +1,25 @@
-<p>
-  client-list works!
-</p>
+<h1>Liste des clients ({{clientsList.length}})</h1>
+
+<ng-template #noClientFound>
+  <h2>Aucun client trouvé</h2>
+</ng-template>
+
+<div class="row" *ngIf="clientsList.length !== 0; else noClientFound">
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let client of clientsList">
+        <td>{{ client.nom }}</td>
+        <td>{{ client.prenom }}</td>
+        <td>{{ client.login }}</td>
+        <td>{{ client.password }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
