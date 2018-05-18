@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ClientModule } from './client/client.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,11 @@ import { ClientModule } from './client/client.module';
     BrowserModule,
     ClientModule,
     RouterModule.forRoot([]),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: 'JSON_SERVER_URL', useValue: 'http://localhost:3004' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
