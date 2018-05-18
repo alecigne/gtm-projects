@@ -5,14 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ClientModule } from './client/client.module';
-import { ClientListComponent } from './client/client-list/client-list.component';
-import { ClientFormComponent } from './client/client-form/client-form.component';
-
-const routes: Routes = [
-  { path: 'listeClients', component: ClientListComponent },
-  { path: 'editClient/:clientId', component: ClientFormComponent },
-  { path: 'newClient', component: ClientFormComponent },
-];
 
 @NgModule({
   declarations: [
@@ -21,7 +13,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     ClientModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]
