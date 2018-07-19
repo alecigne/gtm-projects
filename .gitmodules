@@ -4,3 +4,6 @@
 [submodule "de_ProxiBanquesi_slm_alc"]
 	path = de_ProxiBanquesi_slm_alc
 	url = https://github.com/alecigne/ProxiBanqueSIv3_slm_alc
+[submodule "es_ProxiBanqueSI_v4_cs_slm_alc"]
+	path = es_ProxiBanqueSI_v4_cs_slm_alc
+	url = https://github.com/alecigne/ProxiBanqueSI_v4_cs_slm_alc
