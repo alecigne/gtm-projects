@@ -13,3 +13,6 @@
 [submodule "ep_superquiz"]
 	path = ep_superquiz
 	url = https://github.com/alecigne/formation-angular
+[submodule "eq_superquiz-final"]
+	path = eq_superquiz-final
+	url = https://github.com/alecigne/formation-angular-final
