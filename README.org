@@ -1,0 +1,15 @@
+#+TITLE: Projets GTM
+
+Ce dépôt contient les projets réalisés lors de la formation GT'M
+Ingénierie du 26/02/2018 au 28/05/2018.
+
+Les projets « d'envergure » (ProxiBanque v2 à 4 et projets Angular)
+ont leur dépôt dédié et sont donc inclus sous forme de sous-modules.
+
+Chaque projet inclut un fichier =.gitignore= qui va exclure de la
+gestion de versions les fichiers spécifiques à Eclipse. La plupart des
+projets réalisés avant l'utilisation de Maven doivent donc faire
+l'objet d'étapes de configuration supplémentaires afin d'être
+totalement fonctionnels, typiquement : association de Tomcat, de la
+librairie JUnit, etc. Ces étapes sont autant que possible mentionnées
+dans le fichier README associé à chaque projet.
