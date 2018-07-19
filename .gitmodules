@@ -16,3 +16,6 @@
 [submodule "eq_superquiz-final"]
 	path = eq_superquiz-final
 	url = https://github.com/alecigne/formation-angular-final
+[submodule "er_proxibanque"]
+	path = er_proxibanque
+	url = https://github.com/alecigne/angular-proxibanque
