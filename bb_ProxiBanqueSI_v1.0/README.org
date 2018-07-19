@@ -1,0 +1,143 @@
+#+TITLE: ProxiBanqueSI
+#+AUTHOR: Joumard S. et Le Cigne A.
+
+* Livrables
+
+Section conservée pour référence ; le livrable transmis au formateur
+n'était sensiblement différent de ce dépôt.
+
+Sont présents dans le dossier du projet les livrables suivants :
+
+- Le projet Eclipse =sj_alc_ProxiBanqueSI= (-> n/a)
+- Un dossier de documentation =Javadoc= au format HTML (-> =./doc=)
+- Un diagramme de classes UML présent dans le dossier =UML= (-> =./UML=)
+- Archive exécutable JAR =ProxiBanque.jar= (-> =./ProxiBanqueSI.jar=)
+- Le présent fichier =README.txt= (-> =./README.org=)
+
+* Description générale
+
+ProxiBanqueSI est une interface destinée aux conseillers de
+ProxiBanque. Cette interface fournit les fonctionnalités décrites
+ci-dessous.
+
+** Gestion clients
+
+1. Ajout d'un client à la base de données clients
+2. Listing des clients de l'agence
+3. Listing des références clients (ID) associées à un conseiller
+4. Modification d'un client
+5. Listing des informations d'un client spécifique
+6. Suppression d'un client
+7. Assignation d'un compte épargne à un client
+8. Assignation d'une carte à un compte courant
+
+** Opération bancaires
+
+1. Faire un virement de compte à compte
+2. Créditer un compte courant
+3. Auditer une agence
+
+* Instructions
+
+** Projet Eclipse
+
+Vous pouvez ainsi l'importer dans Eclipse selon la méthode suivante :
+
+#+BEGIN_EXAMPLE
+  File... > Import... > General > Projects from Folder or Archive
+#+END_EXAMPLE
+
+...puis sélectionner le dossier du projet. La facette Eclipse de base
+suffit à organiser le projet. JUnit est un dépendance.
+
+** Archive JAR exécutable
+
+ProxiBanqueSI est également fourni avec un fichier JAR exécutable
+situé dans le dossier du projet (=./ProxiBanqueSI.jar=). Afin
+d'exécuter ce fichier, vous devez disposer du JRE et vous assurer que
+la variable PATH de votre système pointe vers les exécutables
+Java. Puis, dans le dossier adéquat, exécuter :
+
+#+BEGIN_EXAMPLE
+  java -jar ProxiBanqueSI.jar
+#+END_EXAMPLE
+
+** Documentation
+
+La documentation est disponible au format HTML et peut être consultée
+grâce à votre navigateur en ouvrant le fichier =index.html= du dossier
+=./doc=. La même opération peut être réalisée avec Eclipse :
+
+#+BEGIN_EXAMPLE
+  Clic droit > Open with... > Web browser
+#+END_EXAMPLE
+
+* Utilisation de ProxiBanqueSI
+
+ProxiBanqueSI vous propose un menu qui fournit les fonctionnalités
+décrites ci-dessus. L'accès se fait par l'entrée d'un chiffre dans
+l'interface en ligne de commande.
+
+Chaque client possède un numéro d'identifiant composé de la première
+lettre de son prénom, suivi de son nom et d'une séquence numérique à 4
+chiffres :
+
+#+BEGIN_EXAMPLE
+  mdupont5478
+#+END_EXAMPLE
+
+Des clients sont générés au lancement du programme. En tant que
+conseiller, vous avez déjà 9 conseillers (ceci afin de faciliter le
+test de la limite de clients par conseiller).
+
+Une fonctionnalité =Créditer Compte= est disponible dans le menu
+=Opérations bancaires= afin de faciliter les tests d'audit. Il suffit
+de créditer un client de -5001 € ou moins pour le lister comme un
+client à surveiller durant l'audit.
+
+* Limitations et bugs connus
+
+** Limitations
+
+ProxiBanqueSI v1 ne permet pas :
+
+- De générer et gérer des agences
+- D'attribuer des conseillers à des agences
+- De générer des conseillers - vous intervenez comme un conseiller
+  déjà instancié.
+
+** Bugs
+
+Au moins un bug critique a été identifié : la modification d'un client
+entraîne la suppression de ses comptes et de ses cartes !
+
+* Cahier des charges (pour information)
+
+- [ ] Réseau d'agence : => Seule une agence est représentée.
+- [X] Numéro d'identification alphanumérique et date de création d'une
+  agence
+- [X] Un gérant par agence
+- [X] Chaque conseiller à la responsabilité de 10 clients au maximum
+- [X] Un client est caractérisé par : nom, prénom, adresse, code
+  postal, ville, téléphone
+- [X] Un client peut posséder un compte courant et un compte épargne
+- [X] Un compte est caractérisé par : No compte, solde, date ouverture
+- [X] Un compte courant a une autorisation de découvert de 1000 ¤
+- [ ] Un compte épargne est caractérisé par un taux de rémunération de
+  3% : ~OK mais taux inactif
+- [X] Un client peut proposer une carte électron ou une carte premier
+- [X] Une suppression client implique la suppression de sa carte et
+  comptes
+- [X] Le SI s'appelle ProxiBanqueSI
+- [X] Un conseiller peut gérer ses clients : création, modification,
+  lecture, suppression
+- [X] Un conseiller peut effectuer des virements
+- [X] Un conseiller peut simuler des crédits immobilier/consommation :
+  ~OK mais pas de distinction immobilier/consommation
+- [ ] Gestion de patrimoine pour les clients fortunés : NOK
+- [ ] ProxiBanque peut auditer chaque agence (analyse des comptes de
+  chaque client particulier possédant un découvert de plus de 5000 €
+  et de chaque client entreprise possédant un découvert de plus de
+  50000 €) : ~OK mais pas de compte professionnel dans la base)
+- [X] Modélisation UML de proxibanque : OK
+- [X] Test UNITAIRE : OK
