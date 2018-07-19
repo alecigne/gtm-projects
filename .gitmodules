@@ -1,3 +1,6 @@
 [submodule "ca_ProxiBanqueSI_jmh_alc"]
 	path = ca_ProxiBanqueSI_jmh_alc
 	url = https://github.com/alecigne/ProxiBanqueV2.git
+[submodule "de_ProxiBanquesi_slm_alc"]
+	path = de_ProxiBanquesi_slm_alc
+	url = https://github.com/alecigne/ProxiBanqueSIv3_slm_alc
