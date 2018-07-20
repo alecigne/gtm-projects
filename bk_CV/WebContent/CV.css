@@ -1,0 +1,58 @@
+html {
+	background: #DDD;
+	font-family: georgia;
+}
+
+body {
+	background: #FFF;
+	width: 700px;
+	margin: 0 auto 0 auto;
+	padding: 10px;
+}
+
+.infos p {
+	margin: 5px 0 5px 0;
+}
+
+.infos strong {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.profile {
+	float: right;
+	padding: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1, h2 {
+	font-family: "Arial";
+	color: #ff9999;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+.skills ul {
+	width: 35%;
+	margin-top: 0;
+}
+.skills .first {
+	float: left;
+}
+.skills .second {
+	margin-left: 50%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}

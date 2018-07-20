@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+        div.important {
+			border: 2px solid black;
+		}
+        /*
+        Exercices Sélecteurs CSS
+        Ecrire les sélecteurs CSS correspondants au phrases suivante
+        Pour tester chaque exercice vous pouvez écrire :
+        selecteur à tester {
+			border: 2px solid black;
+		}
+        Puis commenter et passer au suivant
+        1 - tous les éléments
+        2 - tous les éléments p
+        3 - tous les éléments p et tous les éléments div
+        4 - tous les éléments dont un des attributs class vaut important
+        5 - tous les éléments div dont un des attributs class vaut important
+        6 - tous les éléments qui ont la class important et tous les éléments
+            qui ont la class categorie
+        7 - tous les éléments qui ont à la fois la class important et
+            la class categorie
+        8 - tous les éléments span qui suivent immédiatement un span
+        9 - tous les éléments p qui suivent un div (par forcément immédiatement)
+        10- tous les éléments div fils immédiat de body
+        11- tous les éléments fils immédiat de body
+        12- tous les éléments div descendants d'un div
+        13- tous les éléments dont la class est important descendant d'un div
+        14- tous les éléments div ayant 2 ancetres div
+        15- tous les 3e div
+        */
+        </style>
+    </head>
+    <body>
+        body
+        <div id="premier">
+            D1
+            <span>D1 S1</span>
+            <span>D1 S2</span>
+            <span>D1 S3</span>
+        </div>
+        <div>
+            D2
+            <span>D2 S1</span>
+            <span>D2 S2</span>
+            <span class="important">D2 S3</span>
+        </div>
+        <div class="important categorie">
+            D3
+            <div>
+                D3 D1
+                <div>
+                    D3 D1 D1
+                </div>
+            </div>
+            <div>D3 D2</div>
+            <div>D3 D3</div>
+        </div>
+        <p>
+            P4
+            <span>P4 S1</span>
+            <span>P4 S2</span>
+            <span class="important">P4 S3</span>
+        </p>
+        <p class="important">
+            P5
+            <span>P5 S1</span>
+            <span>P5 S2</span>
+            <span class="categorie">P5 S3</span>
+        </p>
+    </body>
+</html>

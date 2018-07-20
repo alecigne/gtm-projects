@@ -1,0 +1,49 @@
+html {
+	background: #DDD;
+	font-family: Arial;
+}
+
+body {
+	background: #FFF;
+	width: 700px;
+	margin: 0 auto 0 auto;
+	padding: 10px;
+}
+
+.infos p {
+	margin: 5px 0 5px 0;
+}
+
+.infos strong {
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.profile {
+	float: right;
+	padding: 10px;
+}
+
+h1, h3 {
+	font-family: verdana;
+	color: #FF8888;
+}
+
+h1 {
+	text-align: center;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+.skills ul {
+	width: 35%;
+	margin-top: 0;
+}
+.skills .first {
+	float: left;
+}
+.skills .second {
+	margin-left: 50%;
+}
