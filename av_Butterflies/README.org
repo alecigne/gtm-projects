@@ -1,0 +1,24 @@
+#+TITLE: bFlyCollect
+
+* Principle
+
+bFlyCollect is a small interface for butterfly collectors. It uses the
+Strategy pattern in order to choose between two collection strategies
+at runtime:
+
+- Nailing down the butterfly on a wooden board;
+- Putting the butterfly in a box.
+
+* How to use
+
+You will be asked for your name, then for some butterflies to collect
+(species and color).
+  
+Using the jar archive:
+  
+#+BEGIN_SRC sh
+  java -jar bFlyCollect.jar
+#+END_SRC
+
+Afterwards you can choose your collecting strategy and see the results
+:)
