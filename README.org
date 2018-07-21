@@ -4,7 +4,13 @@ Ce dépôt contient les projets réalisés lors de la formation GT'M
 Ingénierie du 26/02/2018 au 28/05/2018.
 
 Les projets « d'envergure » (ProxiBanque v2 à 4 et projets Angular)
-ont leur dépôt dédié et sont donc inclus sous forme de sous-modules.
+ont leur dépôt dédié et sont donc inclus sous forme de
+sous-modules. Afin de cloner le dépôt en incluant les sous-modules,
+utiliser la commande suivante :
+
+#+BEGIN_SRC sh
+  git clone --recurse-submodules https://github.com/alecigne/gtm-projects
+#+END_SRC
 
 Chaque projet inclut un fichier =.gitignore= qui va exclure de la
 gestion de versions les fichiers spécifiques à Eclipse. La plupart des
@@ -13,3 +19,6 @@ l'objet d'étapes de configuration supplémentaires afin d'être
 totalement fonctionnels, typiquement : association de Tomcat, de la
 librairie JUnit, etc. Ces étapes sont autant que possible mentionnées
 dans le fichier README associé à chaque projet.
+
+Consulter également le [[https://github.com/alecigne/gtm-projects/wiki][wiki]] ! Lorsque nécessaire, les fichiers README
+des projets y font référence.
