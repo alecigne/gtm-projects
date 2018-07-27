@@ -1,0 +1,3 @@
+#+TITLE: cj_TestWildfly
+
+Se référer au [[https://github.com/alecigne/gtm-projects/wiki/WildFly][wiki]] pour installation.
