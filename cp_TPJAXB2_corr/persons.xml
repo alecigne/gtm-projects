@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persons>
+    <person>
+        <firstName>Andy</firstName>
+        <lastName>Warhol</lastName>
+        <childs>1</childs>
+        <birthDate>2000-12-25</birthDate>
+    </person>
+    <person sex="M">
+        <firstName>David</firstName>
+        <lastName>Bowie</lastName>
+        <childs>12</childs>
+        <birthDate>2000-12-25</birthDate>
+    </person>
+</persons>

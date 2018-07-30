@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<person>
+    <birthDate>2000-12-25</birthDate>
+    <childs>1</childs>
+    <firstName>Jean</firstName>
+    <lastName>Dupont</lastName>
+</person>

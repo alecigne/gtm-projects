@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.formation.org/Patient"
+	xmlns:tns="http://www.formation.org/Patient" elementFormDefault="qualified">
+	<!-- targetNamespace doit être unique (url arbitraire). Définit le set de 
+		balises. xmlns:tns permet de définir le nom court de l'espace de noms ; cf. 
+		c de taglib. -->
+	<element name="patient" type="tns:Patient" />
+	<complexType name="Patient"> <!-- Ici on définit le type -->
+		<!-- Let's define Patient with all his elements -->
+		<sequence>
+			<!-- Order matters -->
+			<element name="id" type="int" />
+			<element name="name" type="string" /> <!-- type schéma, d'où minuscule -->
+			<element name="age" type="int" />
+			<element name="DOB" type="date" />
+			<element name="email" type="string" />
+			<element name="gender" type="string" />
+			<element name="phone" type="string" />
+		</sequence>
+	</complexType>
+</schema>
