@@ -1,0 +1,1 @@
+Se référer au [[https://github.com/alecigne/gtm-projects/wiki/SOAP][wiki]] pour l'utilisation d'un client SOAP.
