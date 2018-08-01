@@ -264,7 +264,41 @@ L'index est organisé selon les modules de la formation.
 * ProxiBanque
 
 ** bb_ProxiBanqueSI_v1.0
+
+Première version du projet ProxiBanqueSI, avec données stockées en
+mémoire.
+
+- Front : CLI
+- Logique : Modèle en couche
+- Back : en mémoire
+
 ** bc_ProxiBanqueSI_v1.1
+
+Ce projet est une tentative d'amélioration du projet v1.0, restée sans
+suite.
+
 ** ca_ProxiBanqueSI_jmh_alc
+
+Deuxième version du projet ProxiBanqueSI.
+
+- Front : API Java Servlet
+- Logique : Modèle en couche. Pas d'ORM, utilisation directe de JDBC.
+- Back : MySQL
+
 ** de_ProxiBanquesi_slm_alc
+
+Troisième version du projet ProxiBanqueSI.
+
+- Front : aucun (API REST). Système de page d'accueil avec login et
+  filtre basé sur l'API Java Servlet.
+- Logique : Modèle en couche avec API REST (JAX-RS). ORM (Hibernate)
+- Back : MySQL
+
 ** es_ProxiBanqueSI_v4_cs_slm_alc
+
+Quatrième et dernière version du projet ProxiBanqueSI.
+
+- Front : Angular 5
+- Logique : Spring/modèle en couche avec API REST (JAX-RS), ORM
+  (Hibernate)
+- Back : MySQL
