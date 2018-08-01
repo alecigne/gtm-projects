@@ -125,6 +125,14 @@ L'index est organisé selon les modules de la formation.
 - [[#cr_firstws][cr_FirstWS]]
 - [[#cs_restws][cs_restws]]
 
+** Design patterns
+
+- [[#ct_cohesion_decouplage][ct_Cohesion_Decouplage]]
+- [[#cu_daofactorystep01][cu_DaoFactoryStep01]]
+- [[#cv_cohesion_decouplage][cv_Cohesion_Decouplage]]
+- [[#cw_patterns][cw_Patterns]]
+- [[#cx_locales][cx_Locales]]
+
 ** Angular
 
 - [[#eo_vm-starter-git][eo_vm-starter-git]]
@@ -238,6 +246,14 @@ L'index est organisé selon les modules de la formation.
 ** cr_FirstWS
 ** cs_restws
 
+* Design patterns
+
+** ct_Cohesion_Decouplage
+** cu_DaoFactoryStep01
+** cv_Cohesion_Decouplage
+** cw_Patterns
+** cx_Locales
+
 * Angular
 
 ** eo_vm-starter-git
@@ -252,5 +268,3 @@ L'index est organisé selon les modules de la formation.
 ** ca_ProxiBanqueSI_jmh_alc
 ** de_ProxiBanquesi_slm_alc
 ** es_ProxiBanqueSI_v4_cs_slm_alc
-
-
