@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liste</title>
+    <link rel="stylesheet" href="c05.css">
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">Shop list</h1>
+	<button onclick="byId()">By ID (random)</button>
+	<button onclick="byClass()">By Class</button>
+	<button onclick="byTag()">By Tag</button>
+	<button onclick="byQuery()">By Selector</button>
+	<button onclick="reset()">reset</button>
+	<button onclick="addElement()">Add</button>
+	<button onclick="removeElement()">Remove</button>
+	
+	
+      <ul>
+        <li id="one" class="hot"><em>Fresh</em> fish</li>
+        <li id="two" class="hot">Chocolate</li>
+        <li id="three" class="hot">Honey</li>
+        <li id="four">Red wine</li>
+      </ul>
+    </div>
+    <script src="js/queries.js"></script>
+  </body>
+</html>

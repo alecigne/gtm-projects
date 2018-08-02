@@ -133,6 +133,15 @@ L'index est organisé selon les modules de la formation.
 - [[#cw_patterns][cw_Patterns]]
 - [[#cx_locales][cx_Locales]]
 
+** JavaScript
+
+- [[#cy_logs][cy_Logs]]
+- [[#cz_orderprocessingmaven][cz_OrderProcessingMaven]]
+- [[#da_orderprocessingmaven][da_OrderProcessingMaven]]
+- [[#db_jsintro][db_JSIntro]]
+- [[#dc_jscheckboxes][dc_JSCheckboxes]]
+- [[#dd_selecteurs][dd_Selecteurs]]
+
 ** Angular
 
 - [[#eo_vm-starter-git][eo_vm-starter-git]]
@@ -253,6 +262,15 @@ L'index est organisé selon les modules de la formation.
 ** cv_Cohesion_Decouplage
 ** cw_Patterns
 ** cx_Locales
+
+* JavaScript
+
+** cy_Logs
+** cz_OrderProcessingMaven
+** da_OrderProcessingMaven
+** db_JSIntro
+** dc_JSCheckboxes
+** dd_Selecteurs
 
 * Angular
 

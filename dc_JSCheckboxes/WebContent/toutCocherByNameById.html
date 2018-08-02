@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<th><input type="checkbox" id="toggle"></th>
+				<th>Catégorie</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="interets" id="musique"
+					value="musique"></td>
+				<td><label for="musique">Musique</label></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="interets" id="cinema"
+					value="cinema"></td>
+				<td><label for="cinema">Cinéma</label></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="interets" id="sport"
+					value="sport"></td>
+				<td><label for="sport">Sport</label></td>
+			</tr>
+		</table>
+	</form>
+	<script>
+		var toggleBox = document.getElementById("toggle");
+
+		if (!!toggleBox.addEventListener) {
+
+			toggleBox.addEventListener('click', toggle, false);
+
+		} else if (!!toggleBox.attachEvent) {
+
+			toggleBox.attachEvent('onclick', toggle);
+
+		} else {
+
+			toggleBox.onclick = toggle;
+
+		}
+
+		function toggle() {
+
+			var interetsBox = document.getElementsByName("interets"); // ou querySelectorAll
+
+			for (var i = 0; i < interetsBox.length; i++) {
+
+				interetsBox[i].checked = toggleBox.checked;
+			}
+		}
+	</script>
+</body>
+</html>
