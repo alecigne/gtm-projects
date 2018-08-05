@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+
+  	<bean id="client" class="org.formation.spring.model.Client"  autowire="byName" >
+		<property name="id" value="1" />
+	 	<property name="nom" value="TOTO" />
+	 	<property name="prenom" value="Tata" />
+	</bean> 
+
+<bean id="adresse" class="org.formation.spring.model.Adresse"
+p:numero="42"
+p:rue="ma rue"
+p:ville="Paris"/>
+
+
+<!-- 	<bean id="reportService" class="org.formation.spring.service.ReportService"> -->
+<!-- 		<property name="reportGenerator" ref="htmlReport"></property> -->
+<!-- 	</bean> -->
+	<bean id="reportService" class="org.formation.spring.service.ReportService" scope="singleton">
+		<constructor-arg ref="pdfReport"></constructor-arg>
+	</bean>
+	<bean id="htmlReport" class="org.formation.spring.report.ReportFactory" 
+	factory-method="createReport">
+		<constructor-arg value="htmlReport"></constructor-arg>
+	</bean>
+	<bean id="pdfReport" class="org.formation.spring.report.ReportFactory"
+	factory-method="createReport">
+	<constructor-arg value="pdfReport"></constructor-arg>
+	</bean>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="electricMotor" class="org.formation.spring.components.ElectricMotor"/>
+	<bean id="gasEngine" class="org.formation.spring.components.GasEngine"/>
+	<bean id="crazyDriver" class="org.formation.spring.components.CrazyDriver"/>
+	<bean id="grandMother" class="org.formation.spring.components.GrandMother"/>
+
+	<bean id="vehicle" class="org.formation.spring.service.Vehicle">
+		<property name="motor" ref="electricMotor"/>
+		<property name="driver" ref="crazyDriver"/>
+	</bean>
+	
+</beans>
