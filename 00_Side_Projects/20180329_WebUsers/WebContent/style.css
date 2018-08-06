@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+	font-family: Arial, Verdana, sans-serif;
+	color: #665544;
+	text-align: center;
+}
+
+body {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#nav, #feature, #footer {
+	background-color: #efefef;
+	margin: 10px;
+	padding: 10px;
+}
+
+.column {
+	background-color: #d1cfef;
+ 	width: 300px;
+	float: left;
+	margin: 10px;
+}
+
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    display: inline; /* suffisant pour enlever les bullet points */
+    padding: 5px;
+}
+
+#content {
+ 	overflow: auto;
+	height: 100%;
+}

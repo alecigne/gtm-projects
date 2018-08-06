@@ -1,0 +1,20 @@
+#+TITLE: HTTPFilter2
+
+* Description
+
+Test d'un filtre HTTP simple. Il s'agit d'aller récupérer un
+utilisateur en base par son login et mot de passe via la Servlet
+=Login=. Si les informations ne sont pas bonnes, une erreur
+s'affiche. Sinon, l'utilisateur est placé en session pour 30 minutes
+et accède à la page d'index.
+
+Tant que cette authentification n'est pas faite, la Servlet
+=LoginFilter= empêche l'utilisateur d'accéder aux pages qui
+nécessitent une authentification.
+
+Principe utilisé dans le projet ProxiBanqueSI v3.
+
+* Exécution
+
+Créer une base de données à partir du fichier =./sql/db.sql=. Les
+requêtes sont réalisées sur le port 3306.

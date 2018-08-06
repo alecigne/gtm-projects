@@ -1,0 +1,5 @@
+#+TITLE: WebUsersSQL
+
+Projet créé en préparation du projet ProxiBanqueSI v2. Il s'agissait
+de tester l'écriture de données dans une base SQL à partir d'un
+formulaire Web, via une Servlet.
