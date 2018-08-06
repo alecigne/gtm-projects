@@ -111,7 +111,7 @@ L'index est organisé selon les modules de la formation.
 
 ** Angular
 
-[[#eo_vm-starter-git][eo_vm-starter-git]] | [[#ep_superquiz][ep_superquiz]] | [[#eq_superquiz-final][eq_superquiz-final]] | [[#er_proxibanque][er_proxibanque]]
+[[#en_vm-starter-final][en_vm-starter-final]] | [[#eo_vm-starter-git][eo_vm-starter-git]] | [[#ep_superquiz][ep_superquiz]] | [[#eq_superquiz-final][eq_superquiz-final]] | [[#er_proxibanque][er_proxibanque]]
 
 ** ProxiBanque
 
@@ -277,6 +277,7 @@ L'index est organisé selon les modules de la formation.
 
 * Angular
 
+** en_vm-starter-final
 ** eo_vm-starter-git
 ** ep_superquiz
 ** eq_superquiz-final
