@@ -104,6 +104,11 @@ L'index est organisé selon les modules de la formation.
 [[#ed_tp6_hibernate][ed_TP6_hibernate]] | [[#ee_aopconcert][ee_AOPConcert]] | [[#ef_springjpa][ef_SpringJPA]] |
 [[#eg_tp6_springdatajpa][eg_TP6_SpringDataJPA]] | [[#eh_simplemavenjpa][eh_simpleMavenJPA]]
 
+** Java Security
+
+[[#ei_simpleauth][ei_SimpleAuth]] | [[#ej_simplelogin][ej_SimpleLogin]] | [[#ek_springsecurity0][ek_springsecurity0]] |
+[[#el_simplemavenjpaweb][el_simpleMavenJPAWeb]] | [[#em_simplemavenjpawebfinal][em_simpleMavenJPAWebFinal]]
+
 ** Angular
 
 [[#eo_vm-starter-git][eo_vm-starter-git]] | [[#ep_superquiz][ep_superquiz]] | [[#eq_superquiz-final][eq_superquiz-final]] | [[#er_proxibanque][er_proxibanque]]
@@ -261,6 +266,14 @@ L'index est organisé selon les modules de la formation.
 ** ef_SpringJPA
 ** eg_TP6_SpringDataJPA
 ** eh_simpleMavenJPA
+
+* Java Security
+
+** ei_SimpleAuth
+** ej_SimpleLogin
+** ek_springsecurity0
+** el_simpleMavenJPAWeb
+** em_simpleMavenJPAWebFinal
 
 * Angular
 
