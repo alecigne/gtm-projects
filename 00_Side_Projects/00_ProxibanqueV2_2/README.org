@@ -1,0 +1,134 @@
+#+TITLE: ProxiBanqueSI
+#+AUTHOR: J.-M. Hiltbrunner et A. Le Cigne
+#+STARTUP: indent
+
+* Livrables
+
+- Le projet Eclipse =ProxiBanqueSI_jmh_alc=.
+- Un dossier de documentation =Javadoc= qui contient la documentation
+  du projet au format HTML.
+- Présents dans le dossier =./UML=, les exports graphiques :
+  + d'un diagramme de classe
+  + d'un diagramme de cas d'utilisation
+  + d'un diagramme de déploiement.
+- Les mockups du projets réalisés à l'aide du logiciel Balsamiq dans
+  le répertoire =Mockups=.
+- Dans le répertoire =./SQL= :
+  + Un fichier =proxibanquesi_minimal.sql= contenant un fichier =.sql=
+    minimal.
+  + Un fichier =proxibanquesi.sql= résultant d'un export de la base de
+    données SQL réalisé par =PHPMyAdmin=.
+- Le présent fichier =README.txt= situé à la racine du projet.
+
+* Description générale
+
+ProxiBanqueSI v2 est l'application Web Java destinée aux conseillers
+de ProxiBanque. Cette interface exploite l'architecture trois tiers :
+
+- Présentation des données sur le navigateur du conseiller
+- Logique du programme (architecture MVC) dans un conteneur de
+  Servlets (Apache Tomcat)
+- Persistance des données dans une base de données SQL (MySQL).
+
+Cette application fournit les fonctionnalités décrites
+ci-dessous. L'utilisateur peut également se référer au diagramme
+d'utilisation fourni (cf. [[*Livrables][Livrables]]).
+
+** Authentification
+
+L'application fournit un système d'authentification basée sur un login
+et un mot de passe conseiller fournis par ProxiBanque.
+
+** Gestion clients
+
+1. Listing des clients de l'agence. Ce listing fait office d'écran
+   principal de gestion des clients : il est possible de cliquer sur
+   ces derniers pour accéder à une liste d'actions.
+2. Création d'un client (nom, prénom, adresse, code postal, ville et
+   téléphone).
+3. Modification d'un client à partir de ses informations existantes.
+4. Description d'un client.
+5. Suppression d'un client.
+6. Ajout d'un compte courant à un client.
+7. Ajout d'un compte épargne à un client.
+
+** Opérations bancaires
+
+1. Virement de compte courant à compte courant.
+2. Simulation de crédit : calcul d'une mensualité à partir d'un
+   montant, d'une durée en mois et d'un TEG.
+
+* Installation
+
+** Dépendances
+
+- Apache Tomcat
+
+  #+BEGIN_EXAMPLE
+  File > New > Other... Server
+  #+END_EXAMPLE
+
+  ...afin d'associer le serveur Apache Tomcat à Eclipse.
+
+- Base de données MySQL (disponible et configurée avec le logiciel
+  XAMPP). Veillez à ce que celle-ci soit disponible sur le
+  port 3306. Les drivers JDBC sont présents dans le répertoire
+  =WebContent/WEB-INF/lib/=.
+
+- Drivers JSTL présents dans le même répertoire.
+
+** Procédure
+
+Afin d'installer le projet, il est possible d'importer le projet dans
+Eclipse. Veuillez à ce que les librairies soient bien connectées au
+projet :
+
+#+BEGIN_EXAMPLE
+Clic droit sur le projet > Properties > Java Build Path ET/OU Targeted Runtimes
+#+END_EXAMPLE
+
+* Instructions d'exécution
+
+Une fois le projet importé et configuré dans Eclipse, faites :
+
+#+BEGIN_EXAMPLE
+Clic droit sur le projet > Run As... > Run on server
+#+END_EXAMPLE
+
+Le navigateur Eclipse devrait s'ouvrir.
+
+Un conseiller par défaut est présent dans la base de données (sauf
+dans le fichier SQL minimal). Ses identifiants sont :
+
+- Login : =cattan=
+- Mot de passe : =proxi1=
+
+Ceci vous permettra de vous identifier et d'utiliser les
+fonctionnalités de ProxiBanqueSI.
+
+* Liens
+
+Un dépôt Github est disponible à l'adresse suivante :
+
+https://github.com/alecigne/ProxiBanqueV2
+
+Cette documentation y est disponible au format =.org= (README lu
+nativement par Github).
+
+* Limitation et bugs
+
+/!\ Cette version est hautement expérimentale et de nombreux bugs
+restent à corriger /!\
+
+- Pas de virement depuis et vers les comptes épargne
+- Pas de possibilité de lister des clients par conseiller/pas de
+  limite à 10 clients par conseiller. Le code a cependant été pensé
+  pour intégrer facilement cette possibilité dans la prochaine version.
+- Pas d'audit
+- Pas de possibilité d'ajouter de carte bancaires (objets métiers
+  présents dans le projet - fera l'objet d'une prochaine MAJ)
+- Pas de gestion de patrimoine
+- Pas de comptes entreprise
+- Suppression en cascade gérée par la base de données (sera géré au
+  niveau logique dans une prochaine version).
+- etc.

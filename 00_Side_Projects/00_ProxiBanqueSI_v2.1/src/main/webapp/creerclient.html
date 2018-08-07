@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ajout d'un client à Proxibanque</title>
+<jsp:include page="/WEB-INF/parts/header.html"></jsp:include>
+</head>
+<body>
+	<form action="CreerClient" method="post">
+		<fieldset>
+			<legend>Infos client</legend>
+			<table>
+				<tr>
+					<td>Nom :</td>
+					<td><input type="text" name="nom" placeholder="Nom"></td>
+				</tr>
+				<tr>
+					<td>Prénom :</td>
+					<td><input type="text" name="prenom" placeholder="Prénom"></td>
+				</tr>
+				<tr>
+					<td>Adresse :</td>
+					<td><input type="text" name="adresse" placeholder="Adresse"></td>
+				</tr>
+				<tr>
+					<td>Code Postal :</td>
+					<td><input type="text" name="codePostal"
+						placeholder="Code postal"></td>
+				</tr>
+				<tr>
+					<td>Ville :</td>
+					<td><input type="text" name="ville" placeholder="Ville"></td>
+				</tr>
+				<tr>
+					<td>Téléphone :</td>
+					<td><input type="text" name="telephone"
+						placeholder="Téléphone">
+					<td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Envoyer" /> <input
+						type="reset" value="Reset" /></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<a href="ListerClients"> Retour à la liste des clients</a>
+	<jsp:include page="/WEB-INF/parts/footer.html"></jsp:include>
+</body>
+</html>

@@ -1,0 +1,37 @@
+package fr.proxibanquesi.model;
+
+/**
+ * Cette classe décrit les caractéristiques d'un compte épargne ProxiBanque.
+ * Chaque client peut disposer d'un compte épargne après ajout explicite par un
+ * conseiller. Aucune carte bancaire n'est associée à un compte épargne.
+ * 
+ * @author Jean-Michel Hiltbrunner, Anthony Le Cigne
+ *
+ */
+
+public class CompteEpargne extends Compte {
+
+	// *** ATTRIBUTES ***
+
+	// TODO Le taux n'est pas utilisé dans ProxiBanqueSI
+	private double tauxRemun = 3.0;
+
+	// *** CONSTRUCTORS ***
+
+	public CompteEpargne(int numeroCompte, double solde, String dateOuverture, int idClient) {
+		super(numeroCompte, solde, dateOuverture, idClient);
+	}
+
+	// *** GETTERS and SETTERS ***
+
+	public double getTauxRemun() {
+		return tauxRemun;
+	}
+
+	public void setTauxRemun(double tauxRemun) {
+		this.tauxRemun = tauxRemun;
+	}
+
+	// *** OTHER METHODS ***
+
+}

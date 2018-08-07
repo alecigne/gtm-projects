@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ProxiBanque - simulation de crédit</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="header">
+		<img alt="" src="banner.jpeg" />
+		<h3>Simulation de crédit à la consommation</h3>
+		<p />
+	</div>
+	<div id="content">
+		<div class="column1">
+			<img alt="" src="credit.jpg" />
+		</div>
+		<div class="column2">
+			<form action="SimulerCredit" method="post">
+				<fieldset>
+					<legend>
+						<b>Simulation crédit</b>
+					</legend>
+					<table>
+						<tr>
+							<td>Montant :</td>
+							<td><input type="text" name="montant" placeholder="Montant"></td>
+						</tr>
+						<tr>
+							<td>Durée (mois) :</td>
+							<td><input type="text" name="duree"
+								placeholder="Durée (mois)"></td>
+						</tr>
+						<tr>
+							<td>Taux (%) :</td>
+							<td><input type="text" name="taux" placeholder="Taux (%)"></td>
+						</tr>
+						<br>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Envoyer"> <input
+								type="reset" value="Reset"></td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+			<a href="operations.html">Retour à la liste des opérations
+				bancaires</a>
+		</div>
+	</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
+</body>
+</html>

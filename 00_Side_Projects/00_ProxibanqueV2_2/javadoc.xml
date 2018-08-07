@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="WebContent/WEB-INF/lib/mysql-connector-java-5.1.37-bin.jar;WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar;WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar;C:\dev\apache-tomcat-8.5.29\lib\catalina.jar;C:\dev\apache-tomcat-8.5.29\lib\servlet-api.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="fr.proxibanquesi.presentation,fr.proxibanquesi.model,fr.proxibanquesi.service,fr.proxibanquesi.tests,fr.proxibanquesi.dao" source="1.7" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

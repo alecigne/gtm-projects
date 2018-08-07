@@ -1,0 +1,3 @@
+#+TITLE: GenericDao
+
+Tentative de création d'une DAO générique pour Hibernate.
