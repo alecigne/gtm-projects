@@ -1,0 +1,5 @@
+#+TITLE: AngularClientRef
+
+Projet similaire au projet EM, avec ajout de la sécurité : login et
+password nécessaires pour accéder à la page de listing des clients,
+ainsi qu'aux WebServices.

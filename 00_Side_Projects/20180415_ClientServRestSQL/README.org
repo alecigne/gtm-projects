@@ -1,0 +1,9 @@
+#+TITLE: ClientServRestSQL
+
+Projet de synthèse Hibernate/Servlet/WebServices en préparation de
+ProxiBanque v3. On peut créer un client à partir d'une interface Web
+qui appelle la Servlet =CreerClient=.
+
+Exemple de requête REST (pour récupérer de l'XML) :
+
+http://localhost:8080/20180415_ClientServRestSQL/services/clientservice/client/all
