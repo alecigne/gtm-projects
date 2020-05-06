@@ -7,9 +7,6 @@
 [submodule "es_ProxiBanqueSI_v4_cs_slm_alc"]
 	path = es_ProxiBanqueSI_v4_cs_slm_alc
 	url = https://github.com/alecigne/ProxiBanqueSI_v4_cs_slm_alc
-[submodule "ep_superquiz"]
-	path = ep_superquiz
-	url = https://github.com/alecigne/formation-angular
 [submodule "er_proxibanque"]
 	path = er_proxibanque
 	url = https://github.com/alecigne/angular-proxibanque
