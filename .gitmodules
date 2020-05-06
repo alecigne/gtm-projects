@@ -7,9 +7,6 @@
 [submodule "es_ProxiBanqueSI_v4_cs_slm_alc"]
 	path = es_ProxiBanqueSI_v4_cs_slm_alc
 	url = https://github.com/alecigne/ProxiBanqueSI_v4_cs_slm_alc
-[submodule "eo_vm-starter-git"]
-	path = eo_vm-starter-git
-	url = https://github.com/alecigne/formation-typescript
 [submodule "ep_superquiz"]
 	path = ep_superquiz
 	url = https://github.com/alecigne/formation-angular
