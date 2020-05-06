@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Distributeur de bonbons</title>
+</head>
+<body>
+
+<div class="container">
+  <h1>Distributeur de bonbons</h1>
+
+  <div class="row">
+
+    <div class="col-md-8 machine" data-bind="foreach: cells">
+      <div class="col-md-4 cell">
+        <div class="col-md-6 image" data-bind="css: { selected: $data == $parent.selectedCell(), sold: sold }">
+          <img data-bind="click: $parent.selectCell.bind($parent), attr: { src: product.category.getImageUrl(), alt: product.category.name }">
+        </div>
+        <div class="col-md-6 productInfo">
+          <div data-bind="text: product.name"></div>
+          <h4 data-bind="text: stock"></h4>
+          <h3 data-bind="text: product.price + '€'"></h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h4>
+        Payé : <span data-bind="text: total"></span> €
+        <br><br>
+        <div data-bind="foreach: acceptedCoins">
+          <img data-bind="attr: {src: url}, click: $parent.acceptCoin.bind($parent)">
+        </div>
+        <button class="btn btn-primary" data-bind="click: pay, enable: canPay">Payer</button>
+      </h4>
+    </div>
+
+  </div><!-- .row -->
+
+</div><!-- .container -->
+
+<!-- Charger les fichiers JavaScript ici -->
+<!-- Charger les fichiers JavaScript ici -->
+<script src="./lib/knockout.js"></script>
+<script src="./lib/require.js"></script>
+<script>
+  require(["./js/bootstrapper"]);
+</script>
+
+</body>
+</html>
