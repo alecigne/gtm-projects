@@ -1,0 +1,13 @@
+<h1>Liste des quizzes ({{quizList.length}})</h1>
+
+<ng-template #noQuizFound>
+  <h2>Aucun quiz trouvé</h2>
+</ng-template>
+
+<div class="row" *ngIf="quizList.length !== 0; else noQuizFound">
+
+  <div class="col-sm-6" *ngFor="let quiz of quizList; let num = index">
+    <app-quiz-item [quiz]="quiz" [num]="num"></app-quiz-item>
+  </div>
+
+</div>

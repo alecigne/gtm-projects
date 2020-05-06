@@ -1,0 +1,8 @@
+<div class="well">
+  <!-- <div class="well" [style.background]="num === 2 ? 'lightgreen' : 'transparent'"> -->
+  <h2>{{ num + 1 }} - {{quiz.title}}</h2>
+  <p class="lead">{{quiz.description}}</p>
+  <div class="text-right">
+    <a [routerLink]="['/quiz', quiz.id]" class="btn btn-info btn-lg">Jouer</a>
+  </div>
+</div>

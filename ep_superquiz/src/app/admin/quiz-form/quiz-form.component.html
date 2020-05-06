@@ -1,0 +1,18 @@
+<form [formGroup]="quizForm" (ngSubmit)="buildQuiz()" novalidate>
+
+  <app-field label="Titre*" [control]="quizForm.get('quizTitle')">
+      <input formControlName="quizTitle" type="text" class="form-control" placeholder="Titre">
+  </app-field>
+
+  <app-field label="Description" [control]="quizForm.get('quizDescription')">
+      <textarea formControlName="quizDescription" class="form-control" placeholder="Description" rows="3"></textarea>
+  </app-field>
+
+  <app-field label="Peut ré-essayer les questions" [control]="quizForm.get('quizMultipleChoiceAllowed')">
+      <input formControlName="quizMultipleChoiceAllowed" type="checkbox">
+  </app-field>
+
+  <button type="submit" class="btn btn-primary" [disabled]="quizForm.invalid">Enregistrer</button>
+  <a routerLink="..">Annuler</a>
+
+</form>

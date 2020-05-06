@@ -1,0 +1,115 @@
+#+STARTUP: indent
+
+* Bootstrap
+
+Installation :
+
+#+BEGIN_SRC sh
+  npm install bootstrap@3 --save
+#+END_SRC
+
+Puis ajout de la ligne dans =.angular-cli.json=.
+
+* Analyse des classes par défaut
+
+- Création d'une interface pour la classe =Quiz= (pour l'exemple)
+- Retour à l'implémentation par défaut
+- Implémentation de la classe =user=
+
+* Composants
+
+- *Réutilisation* des composants
+- *Encapsulation* de la complexité
+- Génération des éléments d'un composant :
+
+  #+BEGIN_SRC sh
+    ng generate component toto
+    # ng g c = raccourci
+  #+END_SRC
+
+- On peut changer le nom des balises à l'aide de l'option =prefix=
+  dans le fichier =.angular-cli.json=
+
+* Interpolations et bindings
+* Directives structurelles
+
+- On crée le composant =QuizList= (à la racine) :
+
+  #+BEGIN_SRC sh
+    ng g c QuizList
+  #+END_SRC
+
+- Attention, le HTML n'a pas accès à =QUIZZES=, il faut rappeler la
+  valeur de =QUIZZES= (scope du fichier) dans une variable de la
+  classe =QuizListComponent=, ici =quizList=.
+
+* Ecran de question d'un quiz
+
+Les *actions* modifient les *données*, les *données* modifient le
+*HTML*.
+
+* Input/output
+* Quiz player
+* Service
+* QuizStateManager
+
+Mémoriser le score, passer à la question suivante, en bref : gestion
+de l'état du QuizPlayer -> on utilise un service (donné par Vincent).
+
+On identifie les endroits où on va utiliser les services (cf. TODOs).
+
+Problématique de la synchronisation de l'affichage entre des données
+modifiées (par exemple un compteur incrémenté). Pas d'input/output car
+pas de lien direct parent/enfant -> utilisation d'un service. On
+wrappe la donnée dans un observable.
+
+Le pipe =async= permet d'extraire la donnée d'un observable
+(cf. p162). =async= « s'abonne » à l'observable.
+
+Bon résumé p160.
+
+* Module Quiz
+* Routeur
+
+=[routerLink]= vs. =[href]= : on recharge TOUT si on utilise =href= !
+
+* Utilisation d'une API REST
+
+- On ajoute un alias (=api-start=)
+- Injection de dépendance pour l'URL de base
+- CRUD complet (code de Vincent)
+
+* Formulaires
+
+** Formulaire simple
+
+- Ajout du module =AdminModule= : utilisation du lazy
+  loading. Inconvénient par rapport à un import : un peu de temps de
+  chargement. On doit recharger le =ng serve=.
+- Deux URL mènent au même formulaire, comportement différent selon
+  =POST= ou =PUT=. cf. méthode =saveQuiz=, quiz avec ou sans ID passé
+  en argument, et comportement différent.
+- Dans le formulaire, on checke l'URL pour la présence d'un
+  ID. cf. =admin/quiz-form=.
+- Ne pas oublier d'importer =ReactiveFormsModule= dans =AdminModule=.
+- Ne surtout pas oublier le =.subscribe= après =saveQuiz= !
+
+** Formulaire factorisé (composant)
+
+- Pour un composant commun :
+  + Faire un module commun
+  + Ajouter le composant à partager
+  + L'exporter
+  + L'importer où c'est nécessaire
+
+* Authentification
+
+- On inscrit le service (=Auth=) dans les providers. Le login
+  fonctionne.
+- On ajoute un garde :
+
+  #+BEGIN_SRC sh
+      ng g g services/auth
+  #+END_SRC
+
+- L'ajouter aux providers :)
