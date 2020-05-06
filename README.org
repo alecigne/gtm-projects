@@ -1,287 +1,124 @@
 #+TITLE: Projets GTM
 
-Ce dépôt contient les projets réalisés lors de la formation GT'M
-Ingénierie du 26/02/2018 au 28/05/2018.
+Ce dépôt contient les projets réalisés lors de ma formation
+Java/Angular ayant eu lieu du 26/02/2018 au 28/05/2018.
 
-Les projets « d'envergure » (ProxiBanque v2 à 4 et projets Angular)
-ont leur dépôt dédié et sont donc inclus sous forme de
-sous-modules. Afin de cloner le dépôt en incluant les sous-modules,
-utiliser la commande suivante :
+Les projets ProxiBanque v2 à 4 ont leur dépôt dédié et sont donc
+inclus sous forme de sous-modules. Afin de cloner le dépôt en incluant
+les sous-modules, utiliser la commande suivante :
 
 #+BEGIN_SRC sh
   git clone --recurse-submodules https://github.com/alecigne/gtm-projects
 #+END_SRC
 
 Chaque projet inclut un fichier =.gitignore= qui va exclure de la
-gestion de versions les fichiers spécifiques à Eclipse. La plupart des
-projets réalisés avant l'utilisation de Maven doivent donc faire
-l'objet d'étapes de configuration supplémentaires afin d'être
-totalement fonctionnels, typiquement : association de Tomcat, de la
-librairie JUnit, etc. Ces étapes sont autant que possible mentionnées
-dans le fichier README associé à chaque projet.
+gestion de versions les fichiers spécifiques à l'IDE utilisé lors de
+cette formation (Eclipse). La plupart des projets réalisés avant
+l'utilisation de Maven doivent donc faire l'objet d'étapes de
+configuration supplémentaires afin d'être totalement fonctionnels,
+typiquement : association de Tomcat, de la librairie JUnit, etc. Ces
+étapes sont autant que possible mentionnées dans le fichier README
+associé à chaque projet.
 
-Consulter également le [[https://github.com/alecigne/gtm-projects/wiki][wiki]] ! Lorsque nécessaire, les fichiers README
+Consulter également le [[https://github.com/alecigne/gtm-projects/wiki][wiki]]. Lorsque nécessaire, les fichiers README
 des projets y font référence.
 
 * Index des projets
 
-L'index est organisé selon les modules de la formation.
+Ci-dessous, un index découpé en sections correspondants aux différents
+modules de la formation.
 
 ** Java 1
 
-[[#aa_gestionformations][aa_GestionFormations]] | [[#ab_bonjour][ab_Bonjour]] | [[#ac_premierprojet][ac_PremierProjet]] |
-[[#ad_premierlivrable][ad_PremierLivrable]] | [[#ae_tpfonctionnelle][ae_TPFonctionnelle]] | [[#af_guessmynumber][af_GuessMyNumber]] |
-[[#ag_guessmynumber2][ag_GuessMyNumber2]] | [[#ah_pairimpair][ah_PairImpair]] | [[#ai_forloops][ai_ForLoops]] | [[#aj_objet][aj_Objet]] |
-[[#ak_constructeur][ak_Constructeur]] | [[#al_constructeur][al_Constructeur]] | [[#am_constructeur][am_Constructeur]] |
-[[#an_polymorphisme][an_Polymorphisme]] | [[#ao_clubmanager][ao_ClubManager]]
+aa_GestionFormations | ab_Bonjour | ac_PremierProjet |
+ad_PremierLivrable | ae_TPFonctionnelle | af_GuessMyNumber |
+ag_GuessMyNumber2 | ah_PairImpair | ai_ForLoops | aj_Objet |
+ak_Constructeur | al_Constructeur | am_Constructeur |
+an_Polymorphisme | ao_ClubManager
 
 ** Java 2
 
-[[#ap_formations][ap_Formations]] | [[#aq_simpleinterface][aq_SimpleInterface]] | [[#ar_pattern][ar_Pattern]] | [[#as_tpinterfaces][as_TPInterfaces]] |
-[[#at_templatemethod][at_TemplateMethod]] | [[#au_characters][au_Characters]] | [[#av_butterflies][av_Butterflies]] | [[#aw_genericite][aw_Genericite]] |
-[[#ax_formations][ax_Formations]] | [[#ay_tpinterfacescollections][ay_TPInterfacesCollections]] | [[#az_vehicles][az_Vehicles]] |
-[[#ba_modeleencouche][ba_ModeleEnCouche]]
+ap_Formations | aq_SimpleInterface | ar_Pattern | as_TPInterfaces |
+at_TemplateMethod | au_Characters | av_Butterflies | aw_Genericite |
+ax_Formations | ay_TPInterfacesCollections | az_Vehicles |
+ba_ModeleEnCouche
 
 ** Git
 
-[[#bd_exceptions][bd_Exceptions]]
+bd_Exceptions
 
 ** Bases de données
 
-[[#be_projet1][be_Projet1]] | [[#bf_projet2][bf_Projet2]] | [[#bg_projet3][bg_Projet3]] | [[#bh_projet4][bh_Projet4]] | [[#bi_projet5][bi_Projet5]]
+be_Projet1 | bf_Projet2 | bg_Projet3 | bh_Projet4 | bi_Projet5
 
 ** HTML/CSS
 
-[[#bj_tpstringbuilder][bj_TPStringBuilder]] | [[#bk_cv][bk_CV]] | [[#bl_rollover][bl_RollOver]] | [[#bm_selecteurs][bm_Selecteurs]] |
-[[#bn_colonnes][bn_Colonnes]] | [[#bo_bootstrap][bo_Bootstrap]]
+bj_TPStringBuilder | bk_CV | bl_RollOver | bm_Selecteurs |
+bn_Colonnes | bo_Bootstrap
 
 ** API Servlet
 
-[[#bp_gestionformations][bp_GestionFormations]] | [[#bq_testservlet][bq_TestServlet]] | [[#br_servlet2][br_Servlet2]] | [[#bs_jsp1][bs_JSP1]] |
-[[#bt_loginpassword][bt_LoginPassword]] | [[#bu_jspthreadscope][bu_jspThreadScope]] | [[#bv_session][bv_Session]] | [[#bw_session2][bw_Session2]] |
-[[#bx_mvc][bx_MVC]] | [[#by_mvc-exercises][by_mvc-exercises]] | [[#bz_sql][bz_sql]]
+bp_GestionFormations | bq_TestServlet | br_Servlet2 | bs_JSP1 |
+bt_LoginPassword | bu_jspThreadScope | bv_Session | bw_Session2 |
+bx_MVC | by_mvc-exercises | bz_sql
 
 ** Maven
 
-[[#cb_firstmaven][cb_FirstMaven]] | [[#cc_mavencalculator][cc_MavenCalculator]]
+cb_FirstMaven | cc_MavenCalculator
 
 ** ORM
 
-[[#cd_hibernate01][cd_Hibernate01]] | [[#ce_onetoone][ce_OneToOne]] | [[#cf_onetomany][cf_OneToMany]] | [[#cg_onetomanyjpa][cg_OneToManyJPA]] |
-[[#ch_manytomanyjpa][ch_ManyToManyJPA]] | [[#ci_gestionsallesjpa][ci_GestionSallesJPA]]
+cd_Hibernate01 | ce_OneToOne | cf_OneToMany | cg_OneToManyJPA |
+ch_ManyToManyJPA | ci_GestionSallesJPA
 
 ** EJB
 
-[[#cj_testwildfly][cj_TestWildfly]] | [[#ck_helloejbwar][ck_HelloEjbWar]] | [[#cl_helloejbwar][cl_HelloEjbWar]]
+cj_TestWildfly | ck_HelloEjbWar | cl_HelloEjbWar
 
 ** WebServices
 
-[[#cm_patientxml][cm_PatientXML]] | [[#cn_tpjaxb][cn_TPJAXB]] | [[#co_tpjaxb2][co_TPJAXB2]] | [[#cp_tpjaxb2_corr][cp_TPJAXB2_corr]] |
-[[#cq_firstws_morane][cq_Firstws_Morane]] | [[#cr_firstws][cr_FirstWS]] | [[#cs_restws][cs_restws]]
+cm_PatientXML | cn_TPJAXB | co_TPJAXB2 | cp_TPJAXB2_corr |
+cq_Firstws_Morane | cr_FirstWS | cs_restws
 
 ** Design patterns
 
-[[#ct_cohesion_decouplage][ct_Cohesion_Decouplage]] | [[#cu_daofactorystep01][cu_DaoFactoryStep01]] |
-[[#cv_cohesion_decouplage][cv_Cohesion_Decouplage]] | [[#cw_patterns][cw_Patterns]] | [[#cx_locales][cx_Locales]]
+ct_Cohesion_Decouplage | cu_DaoFactoryStep01 |
+cv_Cohesion_Decouplage | cw_Patterns | cx_Locales
 
 ** JavaScript
 
-[[#cy_logs][cy_Logs]] | [[#cz_orderprocessingmaven][cz_OrderProcessingMaven]] | [[#da_orderprocessingmaven][da_OrderProcessingMaven]] |
-[[#db_jsintro][db_JSIntro]] | [[#dc_jscheckboxes][dc_JSCheckboxes]] | [[#dd_selecteurs][dd_Selecteurs]]
+cy_Logs | cz_OrderProcessingMaven | da_OrderProcessingMaven |
+db_JSIntro | dc_JSCheckboxes | dd_Selecteurs
 
 ** Spring
 
-[[#df_prestibanque_tp1_setter][df_PrestiBanque_TP1_setter]] | [[#dg_prestibanque_tp1_constructeur][dg_PrestiBanque_TP1_constructeur]] |
-[[#dh_prestibanque_tp2_scope][dh_PrestiBanque_TP2_scope]] | [[#di_prestibanque_tp2_scope_corr][di_PrestiBanque_TP2_scope_corr]] |
-[[#dj_prestibanque_tp2b][dj_PrestiBanque_TP2b]] | [[#dk_springvehiclexml][dk_SpringVehicleXML]] |
-[[#dl_springvehicleannotations][dl_SpringVehicleAnnotations]] | [[#dm_prestibanque_tp3][dm_PrestiBanque_TP3]] | [[#dn_tp3_corr][dn_TP3_corr]] |
-[[#do_tp4_autowire][do_TP4_Autowire]] | [[#dp_tp4][dp_TP4]] | [[#dq_prestibanque_tp5][dq_PrestiBanque_TP5]] | [[#dr_prestibanque_tp5][dr_PrestiBanque_TP5]] |
-[[#dr_tp5-config_morane][dr_TP5-Config_Morane]] | [[#ds_prestibanque_tp5][ds_PrestiBanque_TP5]] |
-[[#dt_prestibanque_tp5_primary][dt_PrestiBanque_TP5_primary]] | [[#du_prestibanque_tp5_qualifier][du_PrestiBanque_TP5_qualifier]] |
-[[#dv_prestibanque_tp5_resource][dv_PrestiBanque_TP5_resource]] | [[#dw_springvehicle_annotations_alc][dw_SpringVehicle_Annotations_alc]] |
-[[#dx_springvehicle_autoxml_alc][dx_SpringVehicle_AutoXML_alc]] | [[#dy_springvehicle_fullxml_alc][dy_SpringVehicle_FullXML_alc]] |
-[[#dz_tp5_couches][dz_TP5_couches]] | [[#ea_tp5_couches_xml][ea_TP5_couches_XML]] | [[#eb_tp5b][eb_TP5b]] | [[#ec_tpsimpleunittests][ec_TPSimpleUnitTests]] |
-[[#ed_tp6_hibernate][ed_TP6_hibernate]] | [[#ee_aopconcert][ee_AOPConcert]] | [[#ef_springjpa][ef_SpringJPA]] |
-[[#eg_tp6_springdatajpa][eg_TP6_SpringDataJPA]] | [[#eh_simplemavenjpa][eh_simpleMavenJPA]]
+df_PrestiBanque_TP1_setter | dg_PrestiBanque_TP1_constructeur |
+dh_PrestiBanque_TP2_scope | di_PrestiBanque_TP2_scope_corr |
+dj_PrestiBanque_TP2b | dk_SpringVehicleXML |
+dl_SpringVehicleAnnotations | dm_PrestiBanque_TP3 | dn_TP3_corr |
+do_TP4_Autowire | dp_TP4 | dq_PrestiBanque_TP5 | dr_PrestiBanque_TP5 |
+dr_TP5-Config_Morane | ds_PrestiBanque_TP5 |
+dt_PrestiBanque_TP5_primary | du_PrestiBanque_TP5_qualifier |
+dv_PrestiBanque_TP5_resource | dw_SpringVehicle_Annotations_alc |
+dx_SpringVehicle_AutoXML_alc | dy_SpringVehicle_FullXML_alc |
+dz_TP5_couches | ea_TP5_couches_XML | eb_TP5b | ec_TPSimpleUnitTests |
+ed_TP6_hibernate | ee_AOPConcert | ef_SpringJPA |
+eg_TP6_SpringDataJPA | eh_simpleMavenJPA
 
 ** Java Security
 
-[[#ei_simpleauth][ei_SimpleAuth]] | [[#ej_simplelogin][ej_SimpleLogin]] | [[#ek_springsecurity0][ek_springsecurity0]] |
-[[#el_simplemavenjpaweb][el_simpleMavenJPAWeb]] | [[#em_simplemavenjpawebfinal][em_simpleMavenJPAWebFinal]]
+ei_SimpleAuth | ej_SimpleLogin | ek_springsecurity0 |
+el_simpleMavenJPAWeb | em_simpleMavenJPAWebFinal
 
 ** Angular
 
-[[#en_vm-starter-final][en_vm-starter-final]] | [[#eo_vm-starter-git][eo_vm-starter-git]] | [[#ep_superquiz][ep_superquiz]] | [[#eq_superquiz-final][eq_superquiz-final]] | [[#er_proxibanque][er_proxibanque]]
+en_vm-starter-final | eo_vm-starter-git | ep_superquiz | eq_superquiz-final | er_proxibanque
 
 ** ProxiBanque
 
-[[#bb_proxibanquesi_v10][bb_ProxiBanqueSI_v1.0]] | [[#bc_proxibanquesi_v11][bc_ProxiBanqueSI_v1.1]] |
-[[#ca_proxibanquesi_jmh_alc][ca_ProxiBanqueSI_jmh_alc]] | [[#de_proxibanquesi_slm_alc][de_ProxiBanquesi_slm_alc]] |
-[[#es_proxibanquesi_v4_cs_slm_alc][es_ProxiBanqueSI_v4_cs_slm_alc]]
-
-* Java 1
-
-** aa_GestionFormations
-** ab_Bonjour
-** ac_PremierProjet
-** ad_PremierLivrable
-** ae_TPFonctionnelle
-** af_GuessMyNumber
-** ag_GuessMyNumber2
-** ah_PairImpair
-** ai_ForLoops
-** aj_Objet
-** ak_Constructeur
-** al_Constructeur
-** am_Constructeur
-** an_Polymorphisme
-** ao_ClubManager
-
-* Java 2
-
-** ap_Formations
-** aq_SimpleInterface
-** ar_Pattern
-** as_TPInterfaces
-** at_TemplateMethod
-** au_Characters
-** av_Butterflies
-** aw_Genericite
-** ax_Formations
-** ay_TPInterfacesCollections
-** az_Vehicles
-** ba_ModeleEnCouche
-
-* Git
-
-** bd_Exceptions
-
-* Bases de données
-
-** be_Projet1
-** bf_Projet2
-** bg_Projet3
-** bh_Projet4
-** bi_Projet5
-
-* HTML/CSS
-
-** bj_TPStringBuilder
-** bk_CV
-** bl_RollOver
-** bm_Selecteurs
-** bn_Colonnes
-** bo_Bootstrap
-
-* API Servlet
-
-** bp_GestionFormations
-** bq_TestServlet
-** br_Servlet2
-** bs_JSP1
-** bt_LoginPassword
-** bu_jspThreadScope
-** bv_Session
-** bw_Session2
-** bx_MVC
-** by_mvc-exercises
-** bz_sql
-
-* Maven
-
-** cb_FirstMaven
-** cc_MavenCalculator
-
-* ORM
-
-** cd_Hibernate01
-** ce_OneToOne
-** cf_OneToMany
-** cg_OneToManyJPA
-** ch_ManyToManyJPA
-** ci_GestionSallesJPA
-
-* EJB
-
-** cj_TestWildfly
-** ck_HelloEjbWar
-** cl_HelloEjbWar
-
-* WebServices
-
-** cm_PatientXML
-** cn_TPJAXB
-** co_TPJAXB2
-** cp_TPJAXB2_corr
-** cq_Firstws_Morane
-** cr_FirstWS
-** cs_restws
-
-* Design patterns
-
-** ct_Cohesion_Decouplage
-** cu_DaoFactoryStep01
-** cv_Cohesion_Decouplage
-** cw_Patterns
-** cx_Locales
-
-* JavaScript
-
-** cy_Logs
-** cz_OrderProcessingMaven
-** da_OrderProcessingMaven
-** db_JSIntro
-** dc_JSCheckboxes
-** dd_Selecteurs
-
-* Spring
-
-** df_PrestiBanque_TP1_setter
-** dg_PrestiBanque_TP1_constructeur
-** dh_PrestiBanque_TP2_scope
-** di_PrestiBanque_TP2_scope_corr
-** dj_PrestiBanque_TP2b
-** dk_SpringVehicleXML
-** dl_SpringVehicleAnnotations
-** dm_PrestiBanque_TP3
-** dn_TP3_corr
-** do_TP4_Autowire
-** dp_TP4
-** dq_PrestiBanque_TP5
-** dr_PrestiBanque_TP5
-** dr_TP5-Config_Morane
-** ds_PrestiBanque_TP5
-** dt_PrestiBanque_TP5_primary
-** du_PrestiBanque_TP5_qualifier
-** dv_PrestiBanque_TP5_resource
-** dw_SpringVehicle_Annotations_alc
-** dx_SpringVehicle_AutoXML_alc
-** dy_SpringVehicle_FullXML_alc
-** dz_TP5_couches
-** ea_TP5_couches_XML
-** eb_TP5b
-** ec_TPSimpleUnitTests
-** ed_TP6_hibernate
-** ee_AOPConcert
-** ef_SpringJPA
-** eg_TP6_SpringDataJPA
-** eh_simpleMavenJPA
-
-* Java Security
-
-** ei_SimpleAuth
-** ej_SimpleLogin
-** ek_springsecurity0
-** el_simpleMavenJPAWeb
-** em_simpleMavenJPAWebFinal
-
-* Angular
-
-** en_vm-starter-final
-** eo_vm-starter-git
-** ep_superquiz
-** eq_superquiz-final
-** er_proxibanque
+bb_ProxiBanqueSI_v1.0 | bc_ProxiBanqueSI_v1.1 |
+ca_ProxiBanqueSI_jmh_alc | de_ProxiBanquesi_slm_alc |
+es_ProxiBanqueSI_v4_cs_slm_alc
 
 * ProxiBanque
 
@@ -290,9 +127,9 @@ L'index est organisé selon les modules de la formation.
 Première version du projet ProxiBanqueSI, avec données stockées en
 mémoire.
 
-- Front : CLI
-- Logique : Modèle en couche
-- Back : en mémoire
+- IHM : CLI, Java SE 8
+- Backend : Java SE 8
+- Persistance : mémoire (hashmap)
 
 ** bc_ProxiBanqueSI_v1.1
 
@@ -303,24 +140,24 @@ suite.
 
 Deuxième version du projet ProxiBanqueSI.
 
-- Front : API Java Servlet
-- Logique : Modèle en couche. Pas d'ORM, utilisation directe de JDBC.
-- Back : MySQL
+- IHM : Web, API Java Servlet
+- Backend : Java SE 8
+- Persistance : JDBC, MySQL
 
 ** de_ProxiBanquesi_slm_alc
 
 Troisième version du projet ProxiBanqueSI.
 
-- Front : aucun (API REST). Système de page d'accueil avec login et
-  filtre basé sur l'API Java Servlet.
-- Logique : Modèle en couche avec API REST (JAX-RS). ORM (Hibernate)
-- Back : MySQL
+- IHM : aucune, élaboration d'une API REST. Présence cependant d'un
+  système de page d'accueil avec login et filtre basé sur l'API Java
+  Servlet.
+- Backend : Java SE 8
+- Persistance : ORM (Hibernate), MySQL
 
 ** es_ProxiBanqueSI_v4_cs_slm_alc
 
 Quatrième et dernière version du projet ProxiBanqueSI.
 
-- Front : Angular 5
-- Logique : Spring/modèle en couche avec API REST (JAX-RS), ORM
-  (Hibernate)
-- Back : MySQL
+- IHM : Angular 5
+- Backend : Java SE 8, Spring
+- Persistance : ORM (Hibernate), MySQL
