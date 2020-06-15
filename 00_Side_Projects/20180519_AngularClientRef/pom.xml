@@ -17,7 +17,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- La version est importante ! Sinon pas de WebApplicationInitializer -->
 		<springframework.version>4.3.7.RELEASE</springframework.version>
-		<springframework.security.version>3.2.0.RELEASE</springframework.security.version>
+		<springframework.security.version>5.3.3.RELEASE</springframework.security.version>
 		<spring.jpa.data.version>1.9.2.RELEASE</spring.jpa.data.version>
 		<hibernate.version>4.2.1.Final</hibernate.version>
 		<jsp.version>2.2</jsp.version>
