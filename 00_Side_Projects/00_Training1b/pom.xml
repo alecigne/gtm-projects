@@ -13,7 +13,7 @@
 		<!-- Spring -->
 		<springframework.version>4.3.7.RELEASE</springframework.version>
 		<!-- MySQL Database driver -->
-		<mysql.version>5.1.37</mysql.version>
+		<mysql.version>8.0.16</mysql.version>
 		<!-- Spring ORM -->
     <hibernate.version>4.2.1.Final</hibernate.version>
 		<spring.jpa.data.version>1.9.2.RELEASE</spring.jpa.data.version>
